@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingTop="9dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="9dp">
+
+        <com.sk.weichat.view.ClearEditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/et_search_bg"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="9dp"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/grey"
+            android:visibility="gone"
+            android:textSize="@dimen/message_search_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/net_error_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fedbd9"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/net_error" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/tip_network_error"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_icon" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_no_nearly_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/no_data_for_the_time_being"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/birthday_rl"
+            style="@style/IMTbleLine_UP">
+
+            <TextView
+                android:id="@+id/birthday_text"
+                style="@style/IMTbleLine_TextKey"
+                android:drawableLeft="@drawable/resume_empty_icon"
+                android:text="@string/birthday" />
+
+            <TextView
+                android:id="@+id/birthday_tv"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/birthday_arrow_img"
+                android:layout_toRightOf="@+id/birthday_text" />
+
+            <ImageView
+                android:id="@+id/birthday_arrow_img"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/online_rl"
+            style="@style/IMTbleLine"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/online_text"
+                style="@style/IMTbleLine_TextKey"
+                android:drawableLeft="@drawable/resume_empty_icon"
+                android:text="@string/label_online_time" />
+
+            <TextView
+                android:id="@+id/online_tv"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/online_arrow_img"
+                android:layout_toRightOf="@+id/online_text" />
+
+            <ImageView
+                android:id="@+id/online_arrow_img"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/erweima"
+            style="@style/IMTbleLine_UP"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:id="@+id/look_location_tv_02"
+                style="@style/IMTbleLine_TextKey"
+                android:drawableLeft="@drawable/resume_empty_icon"
+                android:text="@string/qrcode" />
+
+            <TextView
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/look_location_imgs_02"
+                android:layout_toRightOf="@+id/look_location_tv_02" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/ic_qr_code" />
+
+            <ImageView
+                android:id="@+id/look_location_imgs_02"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/look_location_rl"
+            style="@style/IMTbleLine">
+
+            <TextView
+                android:id="@+id/look_location_tv"
+                style="@style/IMTbleLine_TextKey"
+                android:drawableLeft="@drawable/resume_empty_icon"
+                android:text="@string/now_location" />
+
+            <TextView
+                android:id="@+id/look_location_tvs"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/look_location_imgs"
+                android:layout_toRightOf="@+id/look_location_tv" />
+
+            <ImageView
+                android:id="@+id/look_location_imgs"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

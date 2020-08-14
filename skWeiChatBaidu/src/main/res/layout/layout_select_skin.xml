@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_skin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="10dp"
+    android:background="@color/alp_background"
+    android:visibility="gone">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/original_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_normal"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+            <Button
+                android:id="@+id/beauty_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_beauty"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/romance_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_romance"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+            <Button
+                android:id="@+id/warm_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_warm"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+            <Button
+                android:id="@+id/tender_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_tender"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+            <Button
+                android:id="@+id/sunrise_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_sunrise"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+            <Button
+                android:id="@+id/sunset_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_sunset"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+            <Button
+                android:id="@+id/cool_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_cool"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+            <Button
+                android:id="@+id/evergreen_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:onClick="SelectSkin"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/filter_evergreen"
+                android:textColor="@color/chat_background"
+                android:textSize="@dimen/live_skin_size" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

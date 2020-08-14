@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="#F3F3F3"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <FrameLayout
+        android:id="@+id/fl_text_meun"
+        android:layout_width="43dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
+            android:src="@drawable/ic_text_menu" />
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@color/chat_bottom_line" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_public_meun_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/meun_left_img1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/ic_public_menu"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/meunText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12313"
+                android:textSize="@dimen/chat_text_size" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/meun_light1"
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@color/chat_bottom_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_public_meun_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/meun_left_img2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/ic_public_menu"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/meunText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12313"
+                android:textSize="@dimen/chat_text_size" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/meun_light2"
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@color/chat_bottom_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_public_meun_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/meun_left_img3"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/ic_public_menu"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/meunText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12313"
+                android:textSize="@dimen/chat_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

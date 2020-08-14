@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/normal_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_white"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/one_level_title"/>
+
+        <ImageView
+            android:id="@+id/search_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/Grey_300"
+            android:padding="12dp"
+            android:src="@drawable/search_near"/>
+
+    </LinearLayout>
+
+    <View style="@style/View_Line" />
+
+    <ListView
+        android:id="@+id/lv_addr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@color/Grey_200"
+        android:dividerHeight="0.1dp"/>
+
+</LinearLayout>

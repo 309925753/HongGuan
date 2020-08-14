@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/department_name"
+                    style="@style/IMTbleLine_TextKey"
+                    android:drawablePadding="5dp"
+                    android:text="@string/new_department_name" />
+
+                <com.sk.weichat.view.ClearEditText
+                    android:id="@+id/department_edit"
+                    style="@style/IMTbleLine_TextValue"
+                    android:layout_toLeftOf="@+id/name_arrow_img1"
+                    android:layout_toEndOf="@+id/department_name"
+                    android:layout_toRightOf="@+id/company_name"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/enter_new_department_name"
+                    android:inputType="text" />
+
+                <ImageView
+                    android:id="@+id/name_arrow_img1"
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/normal_bg"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/create_department_btn"
+                    style="@style/BossGreenBtn"
+                    android:text="@string/sure_modify" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

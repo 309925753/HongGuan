@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingTop="9dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="9dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/et_search_bg"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="9dp"
+            android:gravity="center_vertical"
+            android:hint="@string/search_friend"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/message_search_size"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:columnCount="4">
+
+        <LinearLayout
+            android:id="@+id/new_friend_rl"
+            style="@style/ContactsGridItem">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/contacts_head_image_size">
+
+                <com.sk.weichat.view.CircleImageView
+                    android:id="@+id/new_friend"
+                    android:layout_width="@dimen/contacts_head_image_size"
+                    android:layout_height="@dimen/contacts_head_image_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/friend_fragment1" />
+
+                <TextView
+                    android:id="@+id/num_tv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignEnd="@+id/new_friend"
+                    android:layout_alignRight="@+id/new_friend"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="-10dp"
+                    android:layout_marginRight="-10dp"
+                    android:background="@drawable/tab_unread_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="2"
+                    tools:visibility="visible" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:text="@string/new_friend" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colleague_rl"
+            style="@style/ContactsGridItem">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/colleague_iv"
+                android:layout_width="@dimen/contacts_head_image_size"
+                android:layout_height="@dimen/contacts_head_image_size"
+                android:background="@drawable/friend_fragment2" />
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:text="@string/my_colleague" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contacts_rl"
+            style="@style/ContactsGridItem">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/contacts_head_image_size">
+
+                <com.sk.weichat.view.CircleImageView
+                    android:id="@+id/contacts"
+                    android:layout_width="@dimen/contacts_head_image_size"
+                    android:layout_height="@dimen/contacts_head_image_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/friend_fragment3" />
+
+                <TextView
+                    android:id="@+id/num_tv2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignEnd="@+id/contacts"
+                    android:layout_alignRight="@+id/contacts"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="-10dp"
+                    android:layout_marginRight="-10dp"
+                    android:background="@drawable/tab_unread_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="3"
+                    tools:visibility="visible" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/phone_contact" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notice_rl"
+            style="@style/ContactsGridItem">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/notice_number"
+                android:layout_width="@dimen/contacts_head_image_size"
+                android:layout_height="@dimen/contacts_head_image_size"
+                android:background="@drawable/friend_fragment4" />
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:text="@string/service_number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group_rl"
+            style="@style/ContactsGridItem">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/group"
+                android:layout_width="@dimen/contacts_head_image_size"
+                android:layout_height="@dimen/contacts_head_image_size"
+                android:background="@drawable/friend_fragment5" />
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:text="@string/group" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/black_rl"
+            style="@style/ContactsGridItem">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/black_iv"
+                android:layout_width="@dimen/contacts_head_image_size"
+                android:layout_height="@dimen/contacts_head_image_size"
+                android:background="@drawable/friend_fragment6" />
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:text="@string/black_list" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/device_rl"
+            style="@style/ContactsGridItem">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/device_iv"
+                android:layout_width="@dimen/contacts_head_image_size"
+                android:layout_height="@dimen/contacts_head_image_size"
+                android:background="@drawable/friend_fragment7" />
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:text="@string/my_device" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/label_rl"
+            style="@style/ContactsGridItem">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/label"
+                android:layout_width="@dimen/contacts_head_image_size"
+                android:layout_height="@dimen/contacts_head_image_size"
+                android:background="@drawable/friend_fragment8" />
+
+            <TextView
+                style="@style/ContactsGridItemText"
+                android:text="@string/tag" />
+
+        </LinearLayout>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>

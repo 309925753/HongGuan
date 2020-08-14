@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/chat_item_padding_left"
+    android:paddingTop="@dimen/chat_item_padding_top"
+    android:paddingRight="@dimen/chat_item_padding_right"
+    android:paddingBottom="@dimen/chat_item_padding_bottom">
+
+    <TextView
+        android:id="@+id/time_tv"
+        style="@style/ChattingUISystem"
+        android:visibility="gone" />
+
+    <com.sk.weichat.view.HeadView
+        android:id="@+id/chat_head_iv"
+        android:layout_width="@dimen/chat_head_size"
+        android:layout_height="@dimen/chat_head_size"
+        android:layout_below="@id/time_tv"
+        android:layout_marginStart="@dimen/chat_head_left"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_marginEnd="@dimen/chat_head_right"
+        android:layout_toRightOf="@id/chat_msc"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/avatar_normal" />
+
+    <CheckBox
+        android:id="@+id/chat_msc"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/chat_head_iv"
+        android:layout_marginTop="@dimen/dp10"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:text="123123123"
+        android:textSize="@dimen/SmallerTextSize"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/chat_warp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nick_name"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:background="@drawable/chat_to_warp_bg"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.sk.weichat.util.link.HttpTextView
+                android:id="@+id/chat_text_replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="210dp"
+                android:paddingLeft="@dimen/chat_text_right_pd"
+                android:paddingRight="@dimen/chat_text_right_pd"
+                android:textColor="@color/dark_grey"
+                android:textSize="13sp"
+                tools:text="被回复的消息部分" />
+
+            <View
+                style="@style/View_Line"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+
+            <com.sk.weichat.util.link.HttpTextView
+                android:id="@+id/chat_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="210dp"
+                android:paddingLeft="@dimen/chat_text_right_pd"
+                android:paddingRight="@dimen/chat_text_right_pd"
+                android:text="12"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/in_state"
+        layout="@layout/view_holder_state_to" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/chat_warp_view"
+        android:layout_alignBottom="@id/chat_warp_view"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/in_state">
+
+        <TextView
+            android:id="@+id/tv_fire_time"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_danmu"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:visibility="gone"
+            tools:text="12"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

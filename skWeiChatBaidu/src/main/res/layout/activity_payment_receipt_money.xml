@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/a_bg_for_transfer_money"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/receipt_money_num"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:id="@+id/transfer_dw_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="bottom"
+                    android:text="￥"
+                    android:textColor="@color/app_black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/transfer_je_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/transfer_dw_tv"
+                    android:maxLength="10"
+                    android:textColor="@color/app_black"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:text="100" />
+
+                <EditText
+                    android:id="@+id/et_transfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_toRightOf="@+id/transfer_dw_tv"
+                    android:background="@null"
+                    android:maxLength="10"
+                    android:textColor="@color/app_black"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <View
+                    style="@style/View_Line"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/transfer_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15_text_size"
+                android:visibility="gone"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/transfer_edit_desc_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/receipt_add_remake"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- <Button
+                 android:id="@+id/transfer_btn"
+                 android:layout_width="180dp"
+                 android:layout_height="42dp"
+                 android:layout_centerInParent="true"
+                 android:layout_marginTop="20dp"
+                 android:background="@drawable/a_bg_for_ts"
+                 android:text="@string/rp_receipt2"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/sp_16_text_size" />-->
+
+            <Button
+                android:id="@+id/transfer_btn"
+                style="@style/BossGreenBtn"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="@dimen/dp30"
+                android:text="@string/rp_receipt2" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.sk.weichat.view.KeyboardxView
+        android:id="@+id/transfer_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:visibility="gone" />
+
+</LinearLayout>

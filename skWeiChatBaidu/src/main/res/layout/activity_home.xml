@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_DFDFDF" />
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/StyleRadioGroupHome"
+            android:drawableTop="@drawable/selector_rb_home"
+            android:text="红馆" />
+
+        <RadioButton
+            android:id="@+id/rb_bar"
+            style="@style/StyleRadioGroupHome"
+            android:drawableTop="@drawable/selector_rb_bar"
+            android:text="约吧" />
+
+        <RadioButton
+            android:id="@+id/rb_message"
+            style="@style/StyleRadioGroupHome"
+            android:drawableTop="@drawable/selector_rb_message"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/StyleRadioGroupHome"
+            android:drawableTop="@drawable/selector_rb_mine"
+            android:text="个人" />
+    </RadioGroup>
+
+</LinearLayout>

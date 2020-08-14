@@ -1,0 +1,204 @@
+<resources>
+    <dimen name="LargestTextSize">20.0dip</dimen>
+    <dimen name="MiddleNormalTextSize">12.0dip</dimen>
+    <dimen name="HintTextSize">12.0dip</dimen>
+    <dimen name="SmallestTextSize">12.0dip</dimen>
+    <dimen name="NormalPadding">12.0dip</dimen>
+    <dimen name="BasicPaddingSize">5.0dip</dimen>
+    <dimen name="emotion_height">170dip</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="pmsg_media_view_height">255dp</dimen>
+    <dimen name="list_padding">0dp</dimen>
+    <dimen name="list_item_padding">16dp</dimen>
+    <dimen name="BigAvater">150dp</dimen>
+    <dimen name="elipse_radius">4dp</dimen>
+    <dimen name="click_nor">48dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="chat_head_size">41dp</dimen>
+    <dimen name="chat_head_left">4dp</dimen>
+    <dimen name="chat_head_right">4dp</dimen>
+    <dimen name="chat_head_top">2dp</dimen>
+    <dimen name="chat_text_left_pd">2dp</dimen>
+    <dimen name="chat_text_right_pd">2dp</dimen>
+
+    <dimen name="chat_item_padding_left">4dp</dimen>
+    <dimen name="chat_item_padding_right">4dp</dimen>
+    <dimen name="chat_item_padding_top">4dp</dimen>
+    <dimen name="chat_item_padding_bottom">4dp</dimen>
+
+    <dimen name="chat_more_margin_top">8dp</dimen>
+    <dimen name="chat_item_padding">4dp</dimen>
+
+    <dimen name="chat_text_head_margin">8dp</dimen>
+    <dimen name="chat_head_margin_right">8dp</dimen>
+
+    <dimen name="action_text_size">16sp</dimen>
+    <dimen name="folder_cover_size">72dp</dimen>
+    <dimen name="folder_padding">10dp</dimen>
+    <dimen name="image_size">120dp</dimen>
+    <dimen name="space_size">2dp</dimen>
+
+    <!-- TITTLE -->
+    <dimen name="BigTextSize">15sp</dimen>
+    <!-- IMTbleLine_TextKey IMTbleLine_TextValue,Applied to <key,value> layouts,Such As Edit My Info And EditTextWithLeftIcon -->
+    <dimen name="NormalTextSize">13sp</dimen>
+    <dimen name="SmallerTextSize">12sp</dimen>
+
+    <dimen name="sp_20_text_size">20sp</dimen>
+    <dimen name="sp_19_text_size">19sp</dimen>
+    <dimen name="sp_18_text_size">18sp</dimen>
+    <dimen name="sp_17_text_size">17sp</dimen>
+    <dimen name="sp_16_text_size">16sp</dimen>
+    <dimen name="sp_15_text_size">15sp</dimen>
+    <dimen name="sp_14_text_size">14sp</dimen>
+    <dimen name="sp_13_text_size">13sp</dimen>
+    <dimen name="sp_12_text_size">12sp</dimen>
+
+    <dimen name="sp_slide_bar_text_size">30sp</dimen>
+
+    <!-- Title Text Size -->
+    <dimen name="title_left_text_size">16sp</dimen>
+    <dimen name="title_center_text_size">18sp</dimen>
+    <dimen name="title_right_text_size">16sp</dimen>
+
+    <!-- xml:popu系列 Text Size-->
+    <dimen name="pop_window">15sp</dimen>
+    <!-- BossGreenBtn -->
+    <dimen name="all_button_size">13sp</dimen>
+    <!-- xml:search edit Text Size-->
+    <dimen name="message_search_size">13sp</dimen>
+
+    <!-- 一级title -->
+    <dimen name="one_level_title">16sp</dimen>
+    <!-- 二级content -->
+    <dimen name="two_level_content">13sp</dimen>
+    <!-- 三级content -->
+    <dimen name="three_level_content">12sp</dimen>
+
+    <!-- Todo MainActivity -->
+    <!-- Tab Text Size -->
+    <dimen name="tab_text_size">12sp</dimen>
+    <!-- Tab RedPoint 宽高、边距 -->
+    <dimen name="indicator_size">18dp</dimen>
+    <dimen name="indicator_margin">20dp</dimen>
+
+    <!-- 消息-昵称 -->
+    <dimen name="message_nick_size">15sp</dimen>
+    <!-- 消息-内容-->
+    <dimen name="message_content_size">12sp</dimen>
+    <!-- 消息-时间-->
+    <dimen name="message_time_size">12sp</dimen>
+    <!-- 附近的人 -->
+    <dimen name="near_person_instance">15sp</dimen>
+    <dimen name="near_person_name">14sp</dimen>
+    <dimen name="near_person_birthday_phone">13sp</dimen>
+
+    <!--  通讯录 -->
+    <dimen name="contacts_head_size">14sp</dimen>
+    <dimen name="contacts_head_image_size">45dp</dimen>
+    <!--  FriendSortAdapter Text Size use 通讯录、黑名单、选择新联系人转发、我的群组Adapter-->
+    <dimen name="friend_sort_size">15sp</dimen>
+    <!--  新的朋友 -->
+    <dimen name="new_friend_nick_size">15sp</dimen>
+    <dimen name="new_friend_content_size">12sp</dimen>
+    <!-- 群组/附近的人-Tab -->
+    <dimen name="group_title_size">16sp</dimen>
+    <!-- 全部群组-名称 -->
+    <dimen name="group_nick_size">15sp</dimen>
+    <!-- 全部群组-描述 -->
+    <dimen name="group_content_size">12sp</dimen>
+    <!-- 全部群组-时间 -->
+    <dimen name="group_time_size">12sp</dimen>
+
+    <!-- 发现-昵称-->
+    <dimen name="bussic_nick_name_size">15sp</dimen>
+    <!-- 发现-内容-->
+    <dimen name="bussic_content_size">15sp</dimen>
+    <!-- 发现-赞-->
+    <dimen name="bussic_praise_size">14sp</dimen>
+    <!-- 发现-评论-->
+    <dimen name="bussic_comment_size">14sp</dimen>
+    <!-- 发现-时间&删除&地址-->
+    <dimen name="bussic_time_size">12sp</dimen>
+    <!-- 发布朋友圈 -->
+    <dimen name="say_something_size">13sp</dimen>
+    <dimen name="select_anything_size">13sp</dimen>
+    <dimen name="add_something_size">13sp</dimen>
+
+    <!-- 我 -->
+    <dimen name="me_title_size">16sp</dimen>
+    <!-- 直播-标题 -->
+    <dimen name="live_title_size">15sp</dimen>
+    <!-- 直播-公告 -->
+    <dimen name="live_notice_size">14sp</dimen>
+    <!-- 直播-昵称 -->
+    <dimen name="live_name_size">13sp</dimen>
+    <!-- 主播-滤镜选择 -->
+    <dimen name="live_skin_size">13sp</dimen>
+    <!-- 观看直播-礼物价格-->
+    <dimen name="gift_size">13sp</dimen>
+    <!-- 我的附件 -->
+    <dimen name="my_file_size">13sp</dimen>
+
+    <!-- 修改密码-->
+    <dimen name="change_password_size">13sp</dimen>
+    <!-- 关于我们-->
+    <dimen name="about_us_size">13sp</dimen>
+
+    <!-- 我的余额 -->
+    <dimen name="enter_money">15sp</dimen>
+    <dimen name="money_size">14sp</dimen>
+
+    <!-- 聊天工具 -->
+    <dimen name="chat_tool_size">12sp</dimen>
+
+    <!-- 红包 -->
+    <dimen name="redpacket_text_size_tab">16sp</dimen>
+    <dimen name="redpacket_text_size_label">16sp</dimen>
+    <dimen name="redpacket_text_size_button">16sp</dimen>
+
+    <!-- CHATCONTENT -->
+    <dimen name="chat_form_info_width">225dp</dimen>
+    <dimen name="chat_width_red">225dp</dimen>
+    <dimen name="chat_state_top">2dp</dimen>
+    <dimen name="chat_text_size">13sp</dimen>
+    <dimen name="message_fire_padding">4dp</dimen>
+
+    <dimen name="menu_item_size">50dp</dimen>
+    <dimen name="menu_item_padding">16dp</dimen>
+    <dimen name="dialog_bottom_cancel_margin">4dp</dimen>
+    <dimen name="article_img_margin_top">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="article_img_dimens">70dp</dimen>
+    <dimen name="article_post_et_h">100dp</dimen>
+
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp45">45dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp210">210dp</dimen>
+    <dimen name="dp220">220dp</dimen>
+    <dimen name="dp250">250dp</dimen>
+    <dimen name="dp260">260dp</dimen>
+    <dimen name="dp270">270dp</dimen>
+    <dimen name="dp300">300dp</dimen>
+    <dimen name="dp350">350dp</dimen>
+
+    <dimen name="fragment_message_radio_button_width">120dp</dimen>
+    <dimen name="fragment_message_radio_button_height">3dp</dimen>
+    <!-- 以前距离屏幕的边距全部是写死的15dp，想改都不好改，现在先统一用这个value，看到写死的地方就先引用这个value-->
+    <dimen name="margin_screen_old">15dp</dimen>
+
+</resources>

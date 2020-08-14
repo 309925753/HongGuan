@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_emotion"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabDots"
+        style="@style/DotTab"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <View style="@style/View_Line" />
+
+    <RadioGroup
+        android:id="@+id/face_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <!--            android:background="@drawable/face_chang_bg"
+-->
+        <RadioButton
+            android:id="@+id/default_face"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/face_chang_bg"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/emoji" />
+
+        <View
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent"
+            android:background="@color/fen_ge_xian" />
+
+        <RadioButton
+            android:id="@+id/moya_face_gif"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/face_chang_bg"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/animation" />
+
+        <View
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent"
+            android:background="@color/fen_ge_xian" />
+
+        <RadioButton
+            android:id="@+id/collection_emotion"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/face_chang_bg"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/custom_emoticons" />
+
+    </RadioGroup>
+
+</LinearLayout>

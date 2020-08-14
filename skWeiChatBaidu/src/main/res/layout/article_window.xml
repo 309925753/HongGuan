@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aw_rl_float"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:background="@drawable/article_circle_bg">
+
+    <ImageView
+        android:id="@+id/aw_iv_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/browser" />
+
+</RelativeLayout>
+

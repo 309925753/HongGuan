@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/app_white"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="15dp">
+
+    <CheckBox
+        android:id="@+id/see_check_box"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <com.sk.weichat.view.CircleImageView
+        android:id="@+id/see_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/see_check_box" />
+
+    <TextView
+        android:id="@+id/see_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/see_avatar"
+        android:text="@string/example_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16_text_size" />
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/see_avatar"
+        android:visibility="visible" />
+
+</RelativeLayout>

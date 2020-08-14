@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/chat_item_padding_bottom"
+    android:paddingLeft="@dimen/chat_item_padding_left"
+    android:paddingRight="@dimen/chat_item_padding_right"
+    android:paddingTop="@dimen/chat_item_padding_top">
+
+    <TextView
+        android:id="@+id/time_tv"
+        style="@style/ChattingUISystem"
+        android:visibility="gone" />
+
+    <com.sk.weichat.view.HeadView
+        android:id="@+id/chat_head_iv"
+        android:layout_width="@dimen/chat_head_size"
+        android:layout_height="@dimen/chat_head_size"
+        android:layout_below="@id/time_tv"
+        android:layout_marginEnd="@dimen/chat_head_right"
+        android:layout_marginStart="@dimen/chat_head_left"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_msc"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/avatar_normal" />
+
+    <CheckBox
+        android:id="@+id/chat_msc"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_alignTop="@id/chat_head_iv"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:text="123123123"
+        android:textSize="@dimen/SmallerTextSize"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/chat_warp_view"
+        android:layout_width="@dimen/chat_form_info_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nick_name"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:background="@drawable/a_bg_for_link"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/link_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="知乎 | 外国人对中国的哪些刻板印象会令中国人大吃一惊？"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/link_iv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon" />
+
+            <TextView
+                android:id="@+id/link_text_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/link_iv"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:padding="3dp"
+                android:text="曼淮的回答，已获得 1574 人赞同 "
+                android:textSize="@dimen/sp_13_text_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/link_app_icon_iv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon" />
+
+            <TextView
+                android:id="@+id/link_app_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/link_app_icon_iv"
+                android:ellipsize="end"
+                android:paddingLeft="3dp"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_holder_state_to" />
+
+</RelativeLayout>

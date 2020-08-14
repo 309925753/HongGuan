@@ -1,0 +1,423 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/part_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="40dp"
+            android:visibility="gone">
+
+            <com.sk.weichat.view.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/im_notice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/system_public_number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/one_level_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/system_public_number_help"
+                android:textColor="@color/Grey_800"
+                android:textSize="@dimen/two_level_content" />
+
+            <TextView
+                android:id="@+id/go_publish_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/enter_public_number"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/one_level_title" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/part_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/avatar_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar_normal"
+                    android:visibility="visible"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="4dip"
+                    app:riv_oval="true"
+                    tools:src="@drawable/welcome_bg" />
+
+                <RelativeLayout style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/name_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/name_align" />
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/name_arrow_img"
+                        android:layout_toRightOf="@+id/name_text" />
+
+                    <ImageView
+                        android:id="@+id/name_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rn_rl"
+                    style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/rename_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/remark_name" />
+
+                    <TextView
+                        android:id="@+id/rename_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/rename_arrow_img"
+                        android:layout_toRightOf="@+id/rename_text" />
+
+                    <ImageView
+                        android:id="@+id/rename_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDescribe"
+                    style="@style/IMTbleLine_UP"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textDescribe"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/describe" />
+
+                    <TextView
+                        android:id="@+id/tvDescribe"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/describe_arrow_img"
+                        android:layout_toRightOf="@+id/textDescribe" />
+
+                    <ImageView
+                        android:id="@+id/describe_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sex_rl"
+                    style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/sex_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/sex_align" />
+
+                    <TextView
+                        android:id="@+id/sex_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/sex_arrow_img"
+                        android:layout_toRightOf="@+id/sex_text" />
+
+                    <ImageView
+                        android:id="@+id/sex_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/birthday_rl"
+                    style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/birthday_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/birthday" />
+
+                    <TextView
+                        android:id="@+id/birthday_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/birthday_arrow_img"
+                        android:layout_toRightOf="@+id/birthday_text" />
+
+                    <ImageView
+                        android:id="@+id/birthday_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/city_rl"
+                    style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/city_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/residence_align" />
+
+                    <TextView
+                        android:id="@+id/city_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/city_arrow_img"
+                        android:layout_toRightOf="@+id/city_text" />
+
+                    <ImageView
+                        android:id="@+id/city_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/phone_rl"
+                    style="@style/IMTbleLine_UP"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/phone_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/phone_number" />
+
+                    <TextView
+                        android:id="@+id/phone_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/phone_arrow_img"
+                        android:layout_toRightOf="@+id/phone_text" />
+
+                    <ImageView
+                        android:id="@+id/phone_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_rl"
+                    style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/account_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        tools:text="@string/sk_account_code" />
+
+                    <TextView
+                        android:id="@+id/account_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/account_arrow_img"
+                        android:layout_toRightOf="@+id/account_text" />
+
+                    <ImageView
+                        android:id="@+id/account_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/online_rl"
+                    style="@style/IMTbleLine"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/online_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/label_online_time" />
+
+                    <TextView
+                        android:id="@+id/online_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/online_arrow_img"
+                        android:layout_toRightOf="@+id/online_text" />
+
+                    <ImageView
+                        android:id="@+id/online_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/erweima"
+                    style="@style/IMTbleLine_UP"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:id="@+id/look_location_tv_02"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/qrcode" />
+
+                    <TextView
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/look_location_imgs_02"
+                        android:layout_toRightOf="@+id/look_location_tv_02" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/ic_qr_code" />
+
+                    <ImageView
+                        android:id="@+id/look_location_imgs_02"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/look_bussic_cicle_per_rl"
+                    style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/look_bussic_cicle_per_tv"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/live_circle_privacy_settings" />
+
+                    <TextView
+                        android:id="@+id/look_bussic_cicle_per_tvs"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/circle_per_arrow_imgs"
+                        android:layout_toRightOf="@+id/look_bussic_cicle_per_tv" />
+
+                    <ImageView
+                        android:id="@+id/circle_per_arrow_imgs"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/look_bussic_cicle_rl"
+                    style="@style/IMTbleLine_UP">
+
+                    <TextView
+                        android:id="@+id/look_bussic_cicle_tv"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/life_circle" />
+
+                    <TextView
+                        android:id="@+id/look_bussic_cicle_tvs"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/circle_arrow_imgs"
+                        android:layout_toRightOf="@+id/look_bussic_cicle_tv" />
+
+                    <ImageView
+                        android:id="@+id/circle_arrow_imgs"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/look_location_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/look_location_tv"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawableLeft="@drawable/resume_empty_icon"
+                        android:text="@string/now_location" />
+
+                    <TextView
+                        android:id="@+id/look_location_tvs"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/look_location_imgs"
+                        android:layout_toRightOf="@+id/look_location_tv" />
+
+                    <ImageView
+                        android:id="@+id/look_location_imgs"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/next_step_btn"
+                    style="@style/BossGreenBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</LinearLayout>

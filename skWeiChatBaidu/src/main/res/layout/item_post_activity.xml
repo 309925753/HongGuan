@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp10"
+    android:id="@+id/rl_main"
+    android:descendantFocusability="afterDescendants">
+
+    <ImageView
+        android:id="@+id/sdv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop" />
+
+    <com.sk.weichat.view.SquareCenterFrameLayout
+        android:id="@+id/add_sc"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/circle_add_item_default_bg" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/circle_add_float_view_bg">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/add_picture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="48dp"
+                android:singleLine="true"
+                android:text="@string/circle_add_image"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/add_something_size" />
+
+        </FrameLayout>
+
+    </com.sk.weichat.view.SquareCenterFrameLayout>
+    <ImageView
+        android:id="@+id/img_delete_pic"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:padding="5dp"
+        android:src="@mipmap/del_circle"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/shape_gray_dot"
+        />
+
+</FrameLayout>

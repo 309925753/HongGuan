@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/tableLayoutRechargeMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+                <include layout="@layout/item_recharge_money" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="19dp"
+            android:text="@string/label_select_recharge_type"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="19dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/label_total"
+                android:textColor="@color/app_black"
+                android:textSize="@dimen/one_level_title" />
+
+            <com.sk.weichat.view.EditTextWithSuffix
+                android:id="@+id/select_money_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="14dp"
+                android:background="@null"
+                android:hint="@string/need_input_money"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:suffix="@string/yuan" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/recharge"
+                style="@style/IMTble_No_Line">
+
+                <TextView
+                    android:id="@+id/wechat_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/yeepay_recharge" />
+
+                <ImageView
+                    android:id="@+id/wechat_arrow_img"
+                    style="@style/basic_info"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

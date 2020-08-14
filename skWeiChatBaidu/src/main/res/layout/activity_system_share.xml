@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar"/>
+
+    <TextView
+        android:id="@+id/tv_create_newmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:paddingBottom="15dp"
+        android:paddingLeft="9dp"
+        android:paddingTop="15dp"
+        android:text="@string/create_new_chat"
+        android:textColor="@color/black"
+        android:textSize="@dimen/one_level_title"/>
+
+    <LinearLayout
+        android:id="@+id/ll_send_life_circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View style="@style/View_Line" />
+
+        <TextView
+            android:id="@+id/tv_send_life_circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_selector_background_ripple"
+            android:paddingLeft="9dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/send_to_life_circle"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/normal_bg"
+        android:paddingBottom="2dp"
+        android:paddingLeft="9dp"
+        android:paddingTop="2dp"
+        android:text="@string/recent_chat"
+        android:textSize="@dimen/two_level_content"/>
+
+    <ListView
+        android:id="@+id/lv_recently_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:divider="@color/pop_line"
+        android:dividerHeight="0.5dp"/>
+
+</LinearLayout>

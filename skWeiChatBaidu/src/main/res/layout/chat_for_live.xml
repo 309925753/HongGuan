@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingRight="80dp">
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_level"
+        android:drawableLeft="@drawable/icon_star"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="99"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/me_title_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/chat_background"
+        android:textSize="@dimen/me_title_size"
+        tools:text="执迷不悟：" />
+
+    <TextView
+        android:id="@+id/chat_from_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/app_white"
+        android:textSize="@dimen/me_title_size"
+        tools:text="世途堪比鸟道，人情浮比鱼蛮。" />
+
+    <!-- USE Other viewHolder layout Prevent error -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/time_tv"
+            style="@style/ChattingUISystem"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/chatsystem_bg"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="@dimen/chat_item_padding">
+
+            <com.sk.weichat.view.HeadView
+                android:id="@+id/chat_head_iv"
+                android:layout_width="@dimen/chat_head_size"
+                android:layout_height="@dimen/chat_head_size"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/chat_text_head_margin"
+                android:layout_marginRight="@dimen/chat_head_margin_right"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/avatar_normal" />
+
+            <TextView
+                android:id="@+id/NAME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/chat_head_iv"
+                android:textSize="@dimen/SmallerTextSize"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/chat_content_layout"
+                android:layout_width="275dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NAME"
+                android:layout_toLeftOf="@+id/chat_head_iv">
+
+                <LinearLayout
+                    android:id="@+id/chat_from_warp_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/chat_from_warp_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/FROM_TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:maxWidth="210dp"
+                        android:paddingLeft="@dimen/chat_text_left_pd"
+                        android:paddingRight="@dimen/chat_text_right_pd"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@id/chat_from_warp_view" />
+
+                <ImageView
+                    android:id="@+id/failed_img_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@id/chat_from_warp_view"
+                    android:background="@drawable/im_send_failed_bg"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/imageview_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toLeftOf="@id/chat_from_warp_view"
+                    android:background="@drawable/send_to"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/chat_msc"
+                style="@style/CustomCheckBoxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/chat_more_margin_top"
+                android:clickable="false"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_chatmessage_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="2dp"
+        android:paddingTop="@dimen/chat_state_top"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+</LinearLayout>

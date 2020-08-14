@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_for_shatup"
+    android:divider="@drawable/full_divider"
+    android:dividerPadding="30dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:id="@+id/llVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple_radius"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/video_chat_tool_meeting_icon"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/chat_video_conference"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/voice_chat_tool_meeting_icon"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/meeting"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/screen_chat_tool_meeting_icon"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/screen_call"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTalk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvTalkAlign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/talk_chat_tool_icon"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/name_talk"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/near_cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+</LinearLayout>

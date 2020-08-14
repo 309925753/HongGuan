@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/screen_identity_textView_impu_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/tip_screen_identity"
+                    android:textColor="@color/app_black"
+                    android:textSize="@dimen/me_title_size"/>
+
+                <TextView
+                    android:id="@+id/screen_identity_textView_impu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="2dp"
+                    android:text="sip:1000@120.24.211.24"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/View_Line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="4dp" />
+
+            <CheckBox
+                android:id="@+id/screen_identity_checkBox_earlyIMS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="3GPP Early IMS Security"
+                android:textSize="@dimen/me_title_size"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+

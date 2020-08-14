@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "389184360239",
+    "firebase_url": "https://sixth-hawk-164509.firebaseio.com",
+    "project_id": "sixth-hawk-164509",
+    "storage_bucket": "sixth-hawk-164509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389184360239:android:6966b9390edc3067",
+        "android_client_info": {
+          "package_name": "com.sk.weichat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389184360239-mb4mg4ne14jlbkapserevpf4ia39tkjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD60HvabbqShcs5FYxy9wpaloHDd3qxzqY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

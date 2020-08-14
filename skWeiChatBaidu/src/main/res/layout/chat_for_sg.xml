@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sk.weichat.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <TextView
+        android:id="@+id/send_size_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="@string/example_will_send_message"
+        android:textSize="@dimen/NormalTextSize" />
+
+    <TextView
+        android:id="@+id/send_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:ellipsize="end"
+        android:maxLines="7"
+        android:padding="10dp"
+        android:text="@string/example_name_list"
+        android:textColor="@color/black"
+        android:textSize="@dimen/BigTextSize" />
+
+    <include layout="@layout/viewstub_sg" />
+
+</com.sk.weichat.view.MyLinearLayout>

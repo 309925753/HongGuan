@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="13dp"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_meeage_type"
+            android:layout_width="45dp"
+            android:layout_height="@dimen/dp45"
+            android:src="@mipmap/message_radio"
+            android:layout_marginTop="@dimen/dp10"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp5"
+        >
+        <TextView
+            android:id="@+id/tv_mesage_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_15_text_size"
+            tools:text="Hi，欢迎来到红馆，在结交新朋友前，我们温馨提醒您：
+1）请遵守《平台使用规则》和《广告发布须知》，若发布规则内容（如：色情低俗内容），红馆有权对账号做出限制权限，甚至冻结账号处理。
+2）在使用平台过程中，若遇到问题需要帮助，请到个人中心-联系人工客服处理，也欢迎你随时对平台提出宝贵意见。
+祝你在红馆玩得开心！"
+            />
+        <TextView
+            android:id="@+id/tv_message_cotent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_666666"
+            android:textSize="11sp"
+            tools:text="1小时前"
+            android:layout_below="@+id/tv_mesage_type"
+            android:layout_marginTop="@dimen/dp10"
+            />
+        <TextView
+            android:id="@+id/tv_meeage_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_666666"
+            android:textSize="11sp"
+            android:text="去看看"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_below="@+id/tv_mesage_type"
+            android:drawableRight="@mipmap/message_right"
+            android:layout_marginTop="@dimen/dp5"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+</LinearLayout>

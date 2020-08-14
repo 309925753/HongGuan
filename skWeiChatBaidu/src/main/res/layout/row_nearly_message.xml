@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_friend_warp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector_background_ripple"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="65dp"
+    android:paddingStart="@dimen/dp10"
+    android:paddingEnd="@dimen/dp10">
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="@dimen/dp20"
+        android:layout_height="@dimen/dp20"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp10"
+        android:src="@mipmap/start_delete"
+        android:visibility="gone" />
+
+    <com.sk.weichat.view.HeadView
+        android:id="@+id/avatar_imgS"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@+id/iv_delete"
+        android:visibility="visible"
+        app:riv_border_width="0dp"
+        app:riv_corner_radius="6dp"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="clamp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_toStartOf="@id/action_ll"
+        android:layout_toEndOf="@id/avatar_imgS"
+        android:minHeight="50dp"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/nick_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/message_nick_size"
+            tools:text="@string/example_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_message_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/message_content_size"
+                android:visibility="visible"
+                tools:text="[草稿]" />
+
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textSize="@dimen/message_content_size"
+                tools:text="1212" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_ll"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/message_time_size"
+            tools:text="6分钟前" />
+
+        <TextView
+            android:id="@+id/num_tv"
+            android:layout_width="@dimen/indicator_size"
+            android:layout_height="@dimen/indicator_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/tab_unread_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="10dp"
+            android:visibility="visible"
+            tools:ignore="SpUsage"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/replay_iv"
+            android:layout_width="@dimen/indicator_size"
+            android:layout_height="@dimen/indicator_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="6dp"
+            app:srcCompat="@mipmap/msg_replay_icon"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/not_push_iv"
+            android:layout_width="@dimen/indicator_size"
+            android:layout_height="@dimen/indicator_size"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toStartOf="@id/num_tv"
+            app:srcCompat="@mipmap/msg_not_push"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="-10dp" />
+
+</RelativeLayout>

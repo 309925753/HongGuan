@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_filter_adapter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="4dp"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/ll_wrap"
+        android:layout_width="52dp"
+        android:layout_height="52dp">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/default_head"
+            app:riv_oval="true" />
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_compte"
+            android:visibility="gone" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_select_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/filter_bg"
+            android:visibility="gone"
+            app:riv_oval="true" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center_horizontal"
+        android:text="目视"
+        android:textColor="@android:color/white"
+        android:textSize="11dp" />
+
+
+</LinearLayout>

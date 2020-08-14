@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_video_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_black">
+
+    <!-- 原PlayerView的界面,不可删除、改变某控件id,可以设置边距，隐藏... -->
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- 封面显示-->
+        <ImageView
+            android:id="@+id/iv_trumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+    </LinearLayout>
+
+    <!-- 重新播放-->
+    <LinearLayout
+        android:id="@+id/app_video_replay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <!-- 播放状态-->
+        <TextView
+            android:id="@+id/app_video_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/app_video_replay_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/simple_player_circle_outline_white_36dp" />
+
+    </LinearLayout>
+
+    <!-- 网络提示-->
+    <LinearLayout
+        android:id="@+id/app_video_netTie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="您正在使用移动网络播放视频\n 可能产生较高流量费用"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/app_video_netTie_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simple_player_btn"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="继续"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <!--加载中-->
+    <LinearLayout
+        android:id="@+id/app_video_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateOnly="true" />
+
+        <TextView
+            android:id="@+id/app_video_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="188Kb/s"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <!-- 顶部栏-->
+        <include layout="@layout/simple_player_topbar" />
+        <!-- 中间触摸提示-->
+        <include
+            layout="@layout/simple_player_touch_gestures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+        <!-- 底部栏-->
+        <include
+            layout="@layout/simple_player_controlbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </LinearLayout>
+
+    <!--声音/亮度控制-->
+    <LinearLayout
+        android:id="@+id/simple_player_settings_container"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#80000000"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/simple_player_volume_controller_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/qcloud_player_icon_audio_vol_mute" />
+
+            <SeekBar
+                android:id="@+id/simple_player_volume_controller"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/qcloud_player_icon_audio_vol" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/simple_player_brightness_controller_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:src="@drawable/qcloud_player_icon_brightness" />
+
+            <SeekBar
+                android:id="@+id/simple_player_brightness_controller"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/qcloud_player_icon_brightness" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--分辨率选择-->
+    <LinearLayout
+        android:id="@+id/simple_player_select_stream_container"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#80000000"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/simple_player_select_streams_list"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/play_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/simple_player_center_play"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <com.dou361.ijkplayer.widget.IjkVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 将原PlayerView必需的界面隐藏，换上自己的界面 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_float_for_audience" />
+
+            <include layout="@layout/layout_send_message" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/off_bg_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/live_backgroud3" />
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/off_avatar_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp" />
+
+        <TextView
+            android:id="@+id/off_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/off_avatar_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/live_end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <Button
+            android:id="@+id/off_leave_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.9"
+            android:background="@drawable/bg_create_live"
+            android:text="@string/sure"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

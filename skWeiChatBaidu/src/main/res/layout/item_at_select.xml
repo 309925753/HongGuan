@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector_background_ripple"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/v_friend_bg"
+        style="@style/View_Line"
+        android:layout_marginStart="65dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginBottom="@dimen/dp15"
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/dp5">
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/set_manager_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/avatar_normal" />
+
+        <TextView
+            android:id="@+id/set_manager_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/set_manager_iv"
+            android:text=""
+            android:textSize="@dimen/me_title_size" />
+
+    </RelativeLayout>
+
+</LinearLayout>

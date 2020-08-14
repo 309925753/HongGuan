@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#151621"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/ll_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="12dp">
+
+        <LinearLayout
+            android:id="@+id/ll_tab8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag7"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_all" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag0"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_food" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag1"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_scenery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag2"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_culture" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag3"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_recreation" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag4"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_hotel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag5"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_shopping" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/trill_tag_style_img"
+                android:src="@drawable/ic_trill_tag6"/>
+
+            <TextView
+                style="@style/trill_tag_style_text"
+                android:text="@string/video_sport" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</HorizontalScrollView>
+
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/headview">-->
+    <!--</android.support.v7.widget.RecyclerView>-->
+

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/transfer_group_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/transfer_group_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/transfer_group_owner"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_manager_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="12dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/set_manager_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/design_admin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/set_manager_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/View_Line"
+                android:layout_marginStart="@dimen/margin_screen_old" />
+
+            <RelativeLayout
+                android:id="@+id/set_invisible_rl"
+                style="@style/IMTble_No_Line"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/set_invisible_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/set_invisible"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/set_invisible_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/copy_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="12dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/copy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/copy_group"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <ImageView
+                    android:id="@+id/copy_arrow_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_guardian_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/set_guardian_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/set_guardian"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/set_guardian_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transmission_select"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tip_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/msg_transmission_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <TextView
+                    android:id="@+id/rl_transmission_select_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_toStartOf="@+id/rl_transmission_select_iv"
+                    android:layout_toEndOf="@+id/tip_tv"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_13_text_size"
+                    tools:text="@string/msg_transmission_public" />
+
+                <ImageView
+                    android:id="@+id/rl_transmission_select_iv"
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_reset_group_chat_key"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/reset_group_chat_key"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/iv_reset_group_chat_key"
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_remarks_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/set_remark_for_room_member"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_look"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="12dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_look"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/public_group_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/rl_look_summer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_public_group"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_read"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_read"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/display_read_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_display_readed_number"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_group_verify"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_verify"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/invitation_confirmation"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_verify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/need_to_be_confirmed"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_group_notify"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/remove_member_notify"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/tip_exit_group_notify"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_show_member"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/display_member"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_show_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_desplay_member"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_chat"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_allow_chat"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/member_chat_privately"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_allow_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_chat_privately"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_invite"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_allow_invite"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/member_invite_friends"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_allow_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_invite_friends"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_upload"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_allow_upload"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/member_upload"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_allow_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_upload"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_conference"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_allow_conference"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/member_meetings"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_allow_conference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_meetings"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_send_course"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/sb_allow_send_course"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/member_course"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_allow_send_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_course"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

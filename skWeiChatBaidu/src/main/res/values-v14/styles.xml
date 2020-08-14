@@ -1,0 +1,40 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyle">@android:style/Widget.Button</item>
+        <item name="android:windowAnimationStyle">@style/IMAnimationStyle</item>
+        <item name="android:actionBarStyle">@style/IMActionBar</item>
+        <item name="android:homeAsUpIndicator">@mipmap/return_icon</item>
+        <item name="android:actionBarItemBackground">@drawable/actionbar_menu_selector</item>
+        <item name="actionBarStyle">@style/IMActionBar</item>
+        <item name="actionBarItemBackground">@drawable/actionbar_menu_selector</item>
+        <item name="homeAsUpIndicator">@mipmap/return_icon</item>
+        <item name="android:listViewStyle">@style/IMListView</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="IMActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <!--<item name="android:icon">@drawable/action_bar_divider</item>-->
+        <item name="android:background">@drawable/actionbar_bg</item>
+        <item name="android:titleTextStyle">@style/IMActionBar.TitleTextStyle</item>
+        <item name="android:subtitleTextStyle">@style/IMActionBar.SubTitleTextStyle</item>
+        <item name="android:indeterminateProgressStyle">@style/ActionBarCustomProgressBar</item>
+        <item name="android:backgroundStacked">@drawable/actionbar_bg</item>
+        <item name="android:backgroundSplit">@drawable/actionbar_bg</item>
+        <item name="titleTextStyle">@style/IMActionBar.TitleTextStyle</item>
+        <item name="subtitleTextStyle">@style/IMActionBar.SubTitleTextStyle</item>
+        <!-- <item name="icon">@drawable/action_bar_divider</item>-->
+        <item name="background">@drawable/actionbar_bg</item>
+        <item name="backgroundStacked">@drawable/actionbar_bg</item>
+        <item name="backgroundSplit">@drawable/actionbar_bg</item>
+        <item name="homeAsUpIndicator">@mipmap/return_icon</item>
+        <item name="indeterminateProgressStyle">@style/ActionBarCustomProgressBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+</resources>

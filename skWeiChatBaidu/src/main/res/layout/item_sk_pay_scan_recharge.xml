@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_bg"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/a_bg_for_pay_public"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_recharge_notify"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/scan_recharge_money"
+            android:textColor="@color/Grey_500"
+            android:textSize="@dimen/sp_15_text_size" />
+
+        <TextView
+            android:id="@+id/sk_scan_money_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:gravity="center"
+            android:textColor="@color/black_2"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="￥0.1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="--------------------------------------------------"
+            android:textColor="@color/Grey_200"
+            android:textSize="@dimen/sp_15_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pay_type"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size" />
+
+            <TextView
+                android:id="@+id/sk_scan_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size"
+                tools:text="@string/alipay" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_recharge_state"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size" />
+
+            <TextView
+                android:id="@+id/sk_scan_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size"
+                tools:text="@string/success" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sk_scan_fail_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_fail_reason"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size" />
+
+            <TextView
+                android:id="@+id/sk_scan_fail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:gravity="left"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size"
+                tools:text="@string/transfer_back_reason_out_time" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_recharge_time"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size" />
+
+            <TextView
+                android:id="@+id/sk_scan_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_13_text_size"
+                tools:text="2019-02-02 10.00.00" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

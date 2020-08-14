@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0px"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrDrawableEnd="@drawable/default_ptr_rotate"
+            ptr:ptrDrawableStart="@drawable/default_ptr_flip"
+            ptr:ptrHeaderTextColor="@color/black"
+            ptr:ptrMode="both"
+            ptr:ptrOverScroll="false"
+            ptr:ptrScrollingWhileRefreshingEnabled="true"
+            ptr:ptrShowIndicator="false" />
+
+        <TextView
+            android:id="@+id/text_dialog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_slide_selected"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_slide_bar_text_size"
+            android:visibility="gone" />
+
+        <com.sk.weichat.sortlist.SideBar
+            android:id="@+id/sidebar"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

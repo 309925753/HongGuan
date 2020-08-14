@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="108dp"
+    android:layout_height="@dimen/dp50"
+    android:layout_marginTop="@dimen/dp10"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_label"
+        android:layout_width="103dp"
+        android:layout_height="@dimen/dp40"
+        android:background="@mipmap/label_box_icon"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        android:src="@mipmap/new_icon"
+        android:tint="#333333" />
+
+</RelativeLayout>

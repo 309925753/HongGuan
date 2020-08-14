@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/divider_line_normal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout style="@style/IMTble_No_Line">
+
+            <TextView
+                android:id="@+id/tvRealName"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/label_real_name" />
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/etRealName"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@+id/tvRealName"
+                android:background="@null"
+                android:drawableEnd="@mipmap/edit_clear_red"
+                android:drawablePadding="10dp"
+                android:hint="@string/input_real_name"
+                android:inputType="text"
+                android:maxLength="16" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/IMTble_No_Line">
+
+            <TextView
+                android:id="@+id/tvIDCard"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/label_id_card" />
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/etIDCard"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@+id/tvIDCard"
+                android:background="@null"
+                android:drawableEnd="@mipmap/edit_clear_red"
+                android:drawablePadding="10dp"
+                android:hint="@string/input_id_card"
+                android:inputType="text"
+                android:maxLength="18" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:id="@+id/tv_prefix"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:drawableRight="@mipmap/popup_arrow_down_green"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="+86"
+                android:textSize="@dimen/sp_14_text_size" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="13.0dip"
+                android:layout_marginBottom="13.0dip"
+                android:background="@color/Grey_300" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/EditTextWithLeftIconNew"
+                android:hint="@string/please_input_phone_number"
+                android:inputType="number"
+                android:textSize="@dimen/one_level_title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="10">
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/image_tv"
+                style="@style/EditTextWithLeftIconNew"
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:digits="@string/digits"
+                android:drawableLeft="@mipmap/ly"
+                android:hint="@string/str_input_code"
+                android:inputType="none"
+                android:maxLength="4"
+                android:textSize="@dimen/one_level_title" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="13.0dip"
+                android:layout_marginBottom="13.0dip"
+                android:background="@color/Grey_300" />
+
+            <ImageView
+                android:id="@+id/image_iv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:padding="3dp"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="13.0dip"
+                android:layout_marginBottom="13.0dip"
+                android:background="@color/Grey_300" />
+
+            <ImageView
+                android:id="@+id/image_iv_refresh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_refre_msg_code" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/auth_code_edit"
+                style="@style/EditTextWithLeftIconNew"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/send_again_btn"
+                android:digits="@string/digits"
+                android:drawableLeft="@mipmap/lm"
+                android:hint="@string/please_input_auth_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textSize="@dimen/one_level_title" />
+
+            <Button
+                android:id="@+id/send_again_btn"
+                style="@style/IMButton.Green"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@color/main_color"
+                android:gravity="center"
+                android:minWidth="60dp"
+                android:text="@string/send"
+                android:textSize="@dimen/one_level_title" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnOpen"
+        style="@style/BossGreenBtn"
+        android:text="@string/yeepay_open" />
+</LinearLayout>

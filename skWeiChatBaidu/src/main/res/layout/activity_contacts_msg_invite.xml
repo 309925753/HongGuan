@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/invited_friend_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@mipmap/share_contans_icon" />
+
+                    <TextView
+                        android:id="@+id/share_app_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/share_app"
+                        android:textColor="@color/app_black"
+                        android:textSize="@dimen/sp_16_text_size" />
+
+                </LinearLayout>
+
+                <com.sk.weichat.view.PullToRefreshSlideListView
+                    android:id="@+id/pull_refresh_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:dividerHeight="0px"
+                    app:ptrAnimationStyle="flip"
+                    app:ptrDrawableEnd="@drawable/default_ptr_rotate"
+                    app:ptrDrawableStart="@drawable/default_ptr_flip"
+                    app:ptrHeaderTextColor="@color/black"
+                    app:ptrMode="both"
+                    app:ptrOverScroll="false"
+                    app:ptrScrollingWhileRefreshingEnabled="true"
+                    app:ptrShowIndicator="false"
+                    app:slideMode="right"
+                    app:slideRightAction="reveal" />
+
+            </LinearLayout>
+
+            <com.sk.weichat.sortlist.SideBar
+                android:id="@+id/sidebar"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_slide_selected"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_slide_bar_text_size"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sure_add_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/one_level_title"
+        android:visibility="visible" />
+
+</LinearLayout>

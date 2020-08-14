@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_DFDFDF" />
+
+    <WebView
+        android:id="@+id/recharge_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:background="@color/color_white"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginLeft="@dimen/dp15"-->
+    <!--                    android:layout_marginTop="14dp"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="余额："-->
+    <!--                        android:textColor="@color/color_999999"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                    <ImageView-->
+    <!--                        android:layout_width="15dp"-->
+    <!--                        android:layout_height="15dp"-->
+    <!--                        android:src="@mipmap/ted_ormosia_money" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/tv_bean"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:text="0"-->
+    <!--                        android:textColor="@color/color_999999"-->
+    <!--                        android:textSize="12sp" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <androidx.recyclerview.widget.RecyclerView-->
+    <!--                    android:id="@+id/rv_amount"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginLeft="15dp"-->
+    <!--                    android:layout_marginTop="25dp"-->
+    <!--                    android:layout_marginRight="5dp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/tv_user_agreement"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_gravity="center_horizontal"-->
+    <!--                    android:layout_marginTop="@dimen/dp15"-->
+    <!--                    android:paddingBottom="@dimen/dp15"-->
+    <!--                    android:text="充值代表已阅读并同意《用户充值协议》"-->
+    <!--                    android:textColor="@color/color_666666"-->
+    <!--                    android:textSize="11sp" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <RadioGroup-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="@dimen/dp10"-->
+    <!--                android:background="@color/white"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:paddingLeft="15dp"-->
+    <!--                android:paddingRight="15dp">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="50dp"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:layout_width="23dp"-->
+    <!--                        android:layout_height="23dp"-->
+    <!--                        android:layout_gravity="center_vertical"-->
+    <!--                        android:layout_marginRight="13dp"-->
+    <!--                        android:src="@mipmap/red_ic_pay_alipay" />-->
+
+    <!--                    <RadioButton-->
+    <!--                        android:id="@+id/rb_alipay"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="50dp"-->
+    <!--                        android:button="@drawable/red_selector_radiobutton"-->
+    <!--                        android:checked="true"-->
+    <!--                        android:layoutDirection="rtl"-->
+    <!--                        android:text="支付宝"-->
+    <!--                        android:textColor="@color/color_333333"-->
+    <!--                        android:textDirection="ltr"-->
+    <!--                        android:textSize="14sp" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <View-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="0.5dp"-->
+    <!--                    android:background="@color/color_DFDFDF" />-->
+
+    <!--            </RadioGroup>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:background="@color/white"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:paddingLeft="15dp"-->
+    <!--                android:paddingRight="15dp">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="充值金额"-->
+    <!--                    android:textColor="@color/color_333333"-->
+    <!--                    android:textSize="14sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/tv_amount"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="right"-->
+    <!--                    android:text="0"-->
+    <!--                    android:textColor="@color/color_FB719A"-->
+    <!--                    android:textSize="18sp"-->
+    <!--                    android:textStyle="bold" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginLeft="5dp"-->
+    <!--                    android:text="元"-->
+    <!--                    android:textColor="@color/color_333333"-->
+    <!--                    android:textSize="14sp" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/btn_buy"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="44dp"-->
+    <!--                android:layout_marginLeft="15dp"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:layout_marginRight="15dp"-->
+    <!--                android:layout_marginBottom="20dp"-->
+    <!--                android:background="@drawable/shape_fb719a_6"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="充值"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="18sp" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+</LinearLayout>

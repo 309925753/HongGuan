@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/action_picker_done"
+        android:orderInCategory="100"
+        android:textSize="16sp"
+        android:title="@string/done"
+        app:showAsAction="ifRoom"/>
+</menu>
+    <!-- From: file:/Users/foamtrace/dev/AndroidStudioProjects/PhotoPicker/photopicker/src/main/res/menu/menu_picker.xml -->

@@ -1,0 +1,322 @@
+<com.sk.weichat.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/divider_line_normal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/riv_avatar"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar_normal"
+                    android:visibility="gone"
+                    app:riv_border_color="@color/white"
+                    app:riv_border_width="4dip"
+                    app:riv_oval="true" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_avatar"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/tv_avatar"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/label_avatar" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/avatar_img"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:layout_marginBottom="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar_normal"
+                        android:visibility="visible"
+                        app:riv_border_color="@color/white"
+                        app:riv_border_width="4dip"
+                        app:riv_oval="true" />
+
+                    <ImageView
+                        android:id="@+id/iv_avatar"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/name_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/nick_name_two" />
+
+                    <com.sk.weichat.view.ClearEditText
+                        android:id="@+id/name_edit"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_marginRight="2dp"
+                        android:layout_toRightOf="@+id/name_text"
+                        android:background="@null"
+                        android:drawableEnd="@mipmap/edit_clear_red"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/input_name"
+                        android:inputType="text"
+                        android:maxLength="50" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sex_select_rl"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/sex_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/sex" />
+
+                    <TextView
+                        android:id="@+id/sex_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/sex_arrow_img"
+                        android:layout_toRightOf="@+id/sex_text" />
+
+                    <ImageView
+                        android:id="@+id/sex_arrow_img"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/birthday_select_rl"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/birthday_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/birthday" />
+
+                    <TextView
+                        android:id="@+id/birthday_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/birthday_arrow_img"
+                        android:layout_toRightOf="@+id/birthday_text" />
+
+                    <ImageView
+                        android:id="@+id/birthday_arrow_img"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/city_select_rl"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/city_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/address" />
+
+                    <TextView
+                        android:id="@+id/city_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/city_arrow_img"
+                        android:layout_toRightOf="@+id/city_text" />
+
+                    <ImageView
+                        android:id="@+id/city_arrow_img"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_desc"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/desc_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:drawablePadding="5dp"
+                        android:text="@string/personalized_signature" />
+
+                    <TextView
+                        android:id="@+id/tv_scan_desc"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/desc_arrow_img"
+                        android:layout_toRightOf="@+id/desc_text"
+                        android:ellipsize="end" />
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/ic_qr_code" />
+
+                    <ImageView
+                        android:id="@+id/desc_arrow_img"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/qccodeforshiku"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/city_text_02"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/my_qrimage" />
+
+                    <TextView
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/city_arrow_img_02"
+                        android:layout_toRightOf="@+id/city_text_02" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="25dp"
+                        android:src="@mipmap/me_qrcode"
+                        android:tint="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/city_arrow_img_02"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/diy_name_rl"
+                    style="@style/IMTble_No_Line"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/iv_diy_name"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/diy_name" />
+
+                    <TextView
+                        android:id="@+id/tv_diy_name"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/iv_diy_next"
+                        android:layout_toRightOf="@+id/iv_diy_name"
+                        android:hint="@string/enter_personalized_signature" />
+
+                    <ImageView
+                        android:id="@+id/iv_diy_next"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/tvPhoneNumber"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/my_phone_number" />
+
+                    <TextView
+                        android:id="@+id/phone_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_alignParentEnd="true"
+                        android:text="" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sk_account_rl"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        android:id="@+id/sk_account_desc_tv"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/label_communication" />
+
+                    <TextView
+                        android:id="@+id/sk_account_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toStartOf="@+id/city_arrow_img_05"
+                        android:layout_toEndOf="@+id/sk_account_desc_tv"
+                        android:ellipsize="end"
+                        android:maxEms="18"
+                        android:maxLines="1"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/city_arrow_img_05"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlInviteCode"
+                    style="@style/IMTble_No_Line">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/invite_code" />
+
+                    <TextView
+                        android:id="@+id/invite_code_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/city_arrow_img_04"
+                        android:selectAllOnFocus="true"
+                        android:text=""
+                        android:textIsSelectable="true" />
+
+                    <ImageView
+                        android:id="@+id/city_arrow_img_04"
+                        style="@style/basic_info"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next_step_btn"
+                style="@style/BossGreenBtn"
+                android:text="@string/update" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</com.sk.weichat.view.MyLinearLayout>

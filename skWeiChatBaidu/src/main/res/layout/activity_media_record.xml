@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_supersurfaceview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextureView-->
+    <!--android:id="@+id/mTexture"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <com.cgfay.cameralibrary.widget.CainSurfaceView
+        android:id="@+id/view_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--<com.sk.weichat.video.SuperSurfaceView-->
+    <!--android:id="@+id/view_surface"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <ImageView
+        android:id="@+id/image_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:visibility="gone" />
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoViewbyXuan
+        android:id="@+id/video_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/set_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:padding="14dp"
+            android:src="@drawable/ic_filter" />
+
+        <ImageView
+            android:id="@+id/iv_swith"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@+id/iv_filter"
+            android:padding="12dp"
+            android:src="@drawable/ic_camera"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <com.sk.weichat.view.cjt2325.cameralibrary.CaptureLayout
+        android:id="@+id/capture_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <!--<FoucsView-->
+    <!--android:id="@+id/fouce_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:visibility="invisible"/>-->
+
+    <!--<View-->
+    <!--android:id="@+id/view_touch"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+
+</FrameLayout>

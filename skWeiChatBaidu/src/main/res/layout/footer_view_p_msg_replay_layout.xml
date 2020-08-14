@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/replay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_bg"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/left_icon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/comment_at_arrow_selected"
+            android:drawablePadding="10dp"
+            android:text="@string/replay"
+            android:textColor="@color/replay_text_color_select"
+            android:textSize="@dimen/NormalTextSize"/>
+
+        <TextView
+            android:id="@+id/to_nick_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/left_icon_tv"
+            android:singleLine="true"
+            android:textColor="@color/replay_text_color_select"
+            android:textSize="@dimen/NormalTextSize"/>
+
+        <ImageView
+            android:id="@+id/replay_clear_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/comment_publisher_clear"/>
+    </RelativeLayout>
+
+</LinearLayout>

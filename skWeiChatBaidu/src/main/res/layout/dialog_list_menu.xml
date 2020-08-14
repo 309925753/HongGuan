@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.sk.weichat.view.MyListView
+        android:id="@+id/dialog_menu_lv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_public_menu_bg"
+        android:divider="@color/chat_bottom_line"
+        android:dividerHeight="0dp">
+    </com.sk.weichat.view.MyListView>
+
+</LinearLayout>

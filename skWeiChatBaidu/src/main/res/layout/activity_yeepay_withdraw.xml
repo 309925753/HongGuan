@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/a_bg_for_payment"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/withdrawal_amount"
+            android:textSize="@dimen/one_level_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="￥"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tixianmoney"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="@color/app_black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/money_sum"
+                android:textSize="@dimen/sp_13_text_size" />
+
+            <TextView
+                android:id="@+id/blance_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tixianall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/all_withdrawals"
+                android:textColor="@color/button_text"
+                android:textSize="13sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rgArrival"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/arrival_real_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_checkbox"
+                android:checked="true"
+                android:paddingStart="15dp"
+                android:text="@string/arrival_real_time" />
+
+            <RadioButton
+                android:id="@+id/arrival_two_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:button="@drawable/selector_checkbox"
+                android:paddingStart="15dp"
+                android:text="@string/arrival_two_hour" />
+
+            <RadioButton
+                android:id="@+id/arrival_tomorrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:button="@drawable/selector_checkbox"
+                android:paddingStart="15dp"
+                android:text="@string/arrival_tomorrow" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tixian"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:drawableTint="@color/white"
+            android:gravity="center"
+            android:text="@string/yeepay_withdraw"
+            android:textColor="@color/white"
+            android:textSize="@dimen/one_level_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/tip_yeepay_withdraw_charge"
+            android:textSize="11sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

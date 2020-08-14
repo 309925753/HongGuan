@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"
+        android:background="@drawable/fillet_dialog_bg"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/resume_star_icon"
+                android:text="@string/select_withdraw_alipay_name"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <EditText
+                android:id="@+id/alipay_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_withdraw_name"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/resume_star_icon"
+                android:text="@string/select_withdraw_alipay_account"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <EditText
+                android:id="@+id/alipay_account_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_withdraw_account"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"
+        android:background="@drawable/fillet_dialog_bg"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/resume_star_icon"
+                android:text="@string/select_withdraw_band_card_name"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <EditText
+                android:id="@+id/band_card_owner_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_withdraw_name"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/resume_star_icon"
+                android:text="@string/select_withdraw_band_card_account"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <EditText
+                android:id="@+id/band_card_account_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_withdraw_band_card_account"
+                android:inputType="number"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/resume_star_icon"
+                android:text="@string/select_withdraw_band_name"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <EditText
+                android:id="@+id/band_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_withdraw_band"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/select_withdraw_band_son_name"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <EditText
+                android:id="@+id/band_son_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/select_withdraw_band_son_name_hint"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/select_withdraw_band_remark"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+            <EditText
+                android:id="@+id/band_card_remark_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/rename_align"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sure_band_btn"
+        style="@style/BossGreenBtn"
+        android:text="@string/band" />
+
+</LinearLayout>

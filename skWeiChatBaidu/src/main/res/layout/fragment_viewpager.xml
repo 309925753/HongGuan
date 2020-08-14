@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_live_list_head" />
+
+    <LinearLayout
+        android:id="@+id/llActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sk.weichat.view.MergerStatus
+            android:id="@+id/mergerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_title_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:src="@mipmap/return_icon"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_title_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="middle"
+                    android:maxWidth="200dp"
+                    android:padding="@dimen/dp10"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/app_white"
+                    android:textSize="@dimen/sp_18_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_title_right"
+                    android:layout_width="@dimen/menu_item_size"
+                    android:layout_height="@dimen/menu_item_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp15"
+                    android:tint="@color/white" />
+
+            </RelativeLayout>
+
+        </com.sk.weichat.view.MergerStatus>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llActionBar">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/white"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="2dp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/tab1_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab1_layout" />
+
+    </RelativeLayout>
+</RelativeLayout>
+

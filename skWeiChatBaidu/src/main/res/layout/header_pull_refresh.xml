@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    tools:background="F0EFF4"
+    tools:paddingBottom="20dp"
+    tools:paddingTop="20dp"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <ImageView
+        android:id="@+id/srl_classics_arrow"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-10dp"
+        android:contentDescription="@android:string/untitled"
+        android:padding="2.5dp"
+        android:src="@drawable/default_ptr_flip" />
+
+    <ImageView
+        android:id="@+id/srl_classics_progress"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@android:string/untitled"
+        android:padding="1.5dp"
+        tools:src="@android:drawable/stat_notify_sync"
+        tools:tint="#666666" />
+
+    <LinearLayout
+        android:id="@+id/srl_classics_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/srl_classics_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/srl_header_pulling"
+            android:textColor="#A8A8A8"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/srl_classics_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/srl_header_update"
+            android:textColor="#7c7c7c"
+            android:textSize="12sp"
+            tools:visibility="gone" />
+
+    </LinearLayout>
+
+</merge>

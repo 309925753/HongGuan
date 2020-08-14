@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tip_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tip_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="110dp"
+            android:paddingStart="24dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="32dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_17_text_size"
+            tools:text="@string/tip_splash_permission_explain" />
+
+        <View style="@style/View_Line" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/dialog_tip_selector_background_ripple"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/button_text"
+            android:textSize="@dimen/sp_18_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

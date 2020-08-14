@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item
+        android:drawable="@drawable/pjq"
+        android:duration="50" />
+
+    <item
+        android:drawable="@drawable/pjl"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjm"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjn"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjo"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjp"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjq"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjl"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjm"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjn"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjo"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjp"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjq"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/pjl"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjm"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjn"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjo"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjp"
+        android:duration="100" />
+
+    <item
+        android:drawable="@drawable/pjq"
+        android:duration="100" />
+
+</animation-list>

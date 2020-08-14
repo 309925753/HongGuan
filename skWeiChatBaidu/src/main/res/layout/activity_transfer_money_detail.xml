@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Grey_300"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp">
+
+        <ImageView
+            android:id="@+id/iv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/actionbar_finish_b" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ts_status_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_ts_status2" />
+
+    <TextView
+        android:id="@+id/ts_tip1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ts_status_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/app_black"
+        android:textSize="@dimen/sp_15_text_size"
+        tools:text="@string/transfer_wait_receive1" />
+
+    <TextView
+        android:id="@+id/ts_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ts_tip1_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        tools:text="￥0.10" />
+
+    <LinearLayout
+        android:id="@+id/ts_cup_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ts_money"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ts_tip2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Grey_500"
+            android:textSize="@dimen/sp_13_text_size"
+            tools:text="@string/transfer_receive_status1" />
+
+        <TextView
+            android:id="@+id/ts_tip3_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/link_nick_name_color"
+            android:textSize="@dimen/sp_13_text_size"
+            tools:text="@string/transfer_receive_click_status1" />
+
+    </LinearLayout>
+
+    <!-- <Button
+         android:id="@+id/ts_sure_btn"
+         android:layout_width="180dp"
+         android:layout_height="42dp"
+         android:layout_below="@+id/ts_cup_ll"
+         android:layout_centerInParent="true"
+         android:layout_marginTop="50dp"
+         android:background="@drawable/a_bg_for_ts"
+         android:text="@string/transfer_sure_receive"
+         android:textColor="@color/white"
+         android:textSize="@dimen/sp_16_text_size"
+         android:visibility="gone" />-->
+
+    <Button
+        android:id="@+id/ts_sure_btn"
+        style="@style/BossGreenBtn"
+        android:layout_below="@+id/ts_cup_ll"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/transfer_sure_receive"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ts_time1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:textColor="@color/Grey_500"
+        android:textSize="@dimen/sp_13_text_size"
+        tools:text="@string/transfer_time" />
+
+    <TextView
+        android:id="@+id/ts_time2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/Grey_500"
+        android:textSize="@dimen/sp_13_text_size"
+        tools:text="@string/transfer_time" />
+
+</RelativeLayout>

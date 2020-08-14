@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pop_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/btn_send_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/list_selector_background_ripple"
+        android:drawableLeft="@drawable/text_image_icon"
+        android:drawablePadding="@dimen/dp10"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:text="@string/send_image_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pop_window" />
+
+    <View style="@style/MenuDivider" />
+
+    <TextView
+        android:id="@+id/btn_send_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/list_selector_background_ripple"
+
+        android:drawableLeft="@drawable/send_vioce_icon"
+        android:drawablePadding="@dimen/dp10"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:text="@string/send_audio"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pop_window" />
+
+    <View style="@style/MenuDivider" />
+
+    <TextView
+        android:id="@+id/btn_send_video"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/list_selector_background_ripple"
+
+        android:drawableLeft="@drawable/send_video_icon"
+        android:drawablePadding="@dimen/dp10"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:text="@string/send_video"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pop_window" />
+
+    <View style="@style/MenuDivider" />
+
+    <TextView
+        android:id="@+id/btn_send_file"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/file_icon"
+        android:drawablePadding="@dimen/dp10"
+
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:text="@string/public_a_file"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pop_window" />
+
+    <View style="@style/MenuDivider" />
+
+    <TextView
+        android:id="@+id/new_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/list_selector_background_ripple"
+        android:drawableLeft="@drawable/new_comment_icon"
+        android:drawablePadding="@dimen/dp10"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:text="@string/latest_comments"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pop_window" />
+
+</LinearLayout>

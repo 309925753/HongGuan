@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/list_selector_background_ripple"
+                android:descendantFocusability="blocksDescendants"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+    <CheckBox
+        android:id="@+id/invite_ck"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:clickable="false"
+        android:focusable="false"/>
+
+    <com.sk.weichat.view.CircleImageView
+        android:id="@+id/invite_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/invite_ck"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/avatar_normal"/>
+
+    <TextView
+        android:id="@+id/invite_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/invite_avatar"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/one_level_title"/>
+
+</RelativeLayout>

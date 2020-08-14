@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/department_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="@string/remark"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_15_text_size" />
+
+        <com.sk.weichat.view.ClearEditText
+            android:id="@+id/department_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/grop_dialog_bg"
+            android:hint="@string/tip_input_remark"
+            android:inputType="text"
+            android:maxLength="50"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text=""
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="@string/tag"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_15_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/rlLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_setting_label"
+                style="@style/IMTbleLine_TextKey"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:background="@drawable/grop_dialog_bg"
+                android:gravity="left"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingRight="@dimen/dp30"
+                android:paddingBottom="8dp"
+                android:text="@string/remark_tag"
+                android:textColor="#999999" />
+
+            <ImageView
+                android:id="@+id/name_arrow_img3"
+                style="@style/basic_info"
+                android:layout_marginRight="25dp"
+                android:contentDescription="@string/app_name"
+                android:tint="#999999"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDescribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="@string/describe"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_15_text_size" />
+
+        <com.sk.weichat.view.ClearEditText
+            android:id="@+id/etDescribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/grop_dialog_bg"
+            android:hint="@string/tip_input_describe"
+            android:inputType="text"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text=""
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+</LinearLayout>

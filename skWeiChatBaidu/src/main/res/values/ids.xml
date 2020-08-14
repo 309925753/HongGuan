@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="tag_key_list_item_view" type="id" />
+    <item name="tag_key_list_item_type" type="id" />
+    <item name="thumb_request" type="id" />
+    <item name="key_avatar" type="id" />
+    <item name="av_chat" type="id" />
+    <item name="key_downloader_view_aware" type="id" />
+
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <View
+        style="@style/View_Line"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/company_tv"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon" />
+
+            <TextView
+                android:id="@+id/version_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="27dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/about_us_size" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/company_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/copy_right_tv"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/about_us_size" />
+
+        <TextView
+            android:id="@+id/copy_right_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/about_us_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp15"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="PrivacyAgree"
+                android:text="@string/yonghuxieyi"
+                android:textColor="#0066cc"
+                android:textSize="@dimen/about_us_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 和 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/about_us_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="Privacy"
+                android:text="@string/yinsizhengce"
+                android:textColor="#0066cc"
+                android:textSize="@dimen/about_us_size" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

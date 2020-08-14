@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/poppic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/corners"
+        android:layout_alignLeft="@+id/rl_pic"
+        android:layout_alignRight="@+id/rl_pic"
+        android:padding="15dp"
+        android:text="取消"
+        android:textColor="@color/color_red"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_pic"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/btn_cancle"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/corners"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/select_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/hor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="相册"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            />
+
+        <View
+
+            android:id="@+id/hor"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:background="@color/gray"
+            />
+
+        <TextView
+            android:id="@+id/select_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="视频"
+            android:textColor="@color/blue"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

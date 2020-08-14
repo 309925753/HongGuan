@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <!-- 多点登录 -->
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:paddingBottom="10dp"
+         android:paddingTop="10dp">
+
+         <TextView
+             android:id="@+id/multi_login_tv"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="开启多点登录"
+             android:visibility="visible"/>
+
+         <com.suke.widget.SwitchButton
+             android:id="@+id/multi_login_btn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:sb_background="@color/app_white"
+             app:sb_checked_color="@color/main_color"
+             app:sb_effect_duration="100"
+             app:sb_shadow_radius="4dp"
+             app:sb_show_indicator="false"/>
+
+     </LinearLayout>
+
+     <ListView
+         android:id="@+id/lv_resource"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/search_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp">
+
+        <com.sk.weichat.view.ClearEditText
+            android:id="@+id/search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:background="@drawable/search_input"
+            android:drawableRight="@drawable/search_clear"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/message_nick_size" />
+
+        <TextView
+            android:id="@+id/tv_search_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:paddingLeft="6dp"
+            android:paddingRight="11dp"
+            android:text="@string/confirm"
+            android:textColor="@color/main_color" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_setconfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

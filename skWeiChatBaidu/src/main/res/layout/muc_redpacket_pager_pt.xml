@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:paddingTop="@dimen/dp10">
+
+    <LinearLayout
+        android:id="@+id/redly1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/fengexian1"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/hbgs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/red_packet_count"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/redpacket_text_size_label" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/edit_redcount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/ge"
+                android:background="#0000"
+                android:digits="@string/digits_number"
+                android:gravity="center_vertical|right"
+                android:inputType="number"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/ge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/individual"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/redpacket_text_size_label" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fengexian"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/redly1"
+        android:layout_marginLeft="20dp"
+        android:background="@color/fen_ge_xian" />
+
+    <LinearLayout
+        android:id="@+id/redly2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/fengexian"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/zje"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/total_money"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/redpacket_text_size_label" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/edit_money"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:gravity="center_vertical|right"
+                android:inputType="number"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textSize="@dimen/redpacket_text_size_label" />
+
+            <TextView
+                android:id="@+id/yuan"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/rmb"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/redpacket_text_size_label" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fengexian2"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/redly2"
+        android:background="@color/switch_thumb_normal_material_dark"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textviewtishi"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/fengexian2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:hint="@string/hint_money_all_same"
+        android:singleLine="true"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/fengexian3"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/textviewtishi"
+        android:layout_marginTop="10dp"
+        android:background="@color/switch_thumb_normal_material_dark"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/edit_blessing_ly"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/fengexian3"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/edit_blessing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="#0000"
+            android:gravity="center_vertical|left"
+            android:hint="@string/auspicious"
+            android:maxLength="14"
+            android:singleLine="true"
+            android:textSize="@dimen/redpacket_text_size_label" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_blessing_ly"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginBottom="@dimen/dp15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp5"
+            android:text="¥"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_amount_of_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fengexian4"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:layout_below="@+id/edit_blessing_ly"
+        android:background="@color/switch_thumb_normal_material_dark"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_sendRed"
+        style="@style/BossGreenBtn"
+        android:layout_below="@+id/ll_scan"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_btn_red"
+        android:text="@string/btn_send_red_packet" />
+
+</RelativeLayout>

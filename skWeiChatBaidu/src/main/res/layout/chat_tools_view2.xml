@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/face_backgroud"
+    android:baselineAligned="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/im_collection_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/im_tool_collection"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/chat_collection"
+            android:textColor="@color/black_trans_99"
+            android:textSize="@dimen/chat_tool_size" />
+
+        <TextView
+            android:id="@+id/im_shake_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/im_tool_shake"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/chat_shake"
+            android:textColor="@color/black_trans_99"
+            android:textSize="@dimen/chat_tool_size" />
+
+        <TextView
+            android:id="@+id/placeholder1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/placeholder2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+    </LinearLayout>
+
+</LinearLayout>

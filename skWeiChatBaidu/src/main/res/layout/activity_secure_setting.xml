@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:divider="@drawable/common_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        style="@style/IMTble_No_Line"
+        android:layout_marginTop="9dp">
+
+        <TextView
+            android:id="@+id/tvDeviceLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/enable_device_lock"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+        <com.sk.weichat.view.SwitchButton
+            android:id="@+id/sbDeviceLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_enable_effect="false"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llDeviceLockDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/rlChangeDeviceLockPassword"
+            style="@style/IMTble_No_Line">
+
+            <TextView
+                android:id="@+id/tvChangeDeviceLockPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/change_device_lock_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/one_level_title" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/IMTble_No_Line">
+
+            <TextView
+                android:id="@+id/tvDeviceLockFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/tip_device_lock_free"
+                android:textColor="@color/black"
+                android:textSize="@dimen/one_level_title" />
+
+            <com.sk.weichat.view.SwitchButton
+                android:id="@+id/sbDeviceLockFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:sb_background="@color/app_white"
+                app:sb_checked_color="@color/main_color"
+                app:sb_enable_effect="false"
+                app:sb_shadow_radius="4dp"
+                app:sb_show_indicator="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAuthLogin"
+        style="@style/IMTble_No_Line"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/sbAuthLogin"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/label_need_not_auth_login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+        <com.sk.weichat.view.SwitchButton
+            android:id="@+id/sbAuthLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+</LinearLayout>

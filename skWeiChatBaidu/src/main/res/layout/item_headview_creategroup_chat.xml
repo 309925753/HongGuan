@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/rl_headview_instant_group"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/list_selector_background_ripple"
+          android:gravity="left|center"
+          android:paddingBottom="15dp"
+          android:paddingLeft="9dp"
+          android:paddingTop="15dp"
+          android:text="@string/select_group_chat_instant"
+          android:textColor="@color/black"
+          android:textSize="@dimen/one_level_title">
+
+</TextView>

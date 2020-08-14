@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_gravity="center_vertical|fill_horizontal"
+              android:background="@drawable/sel_keypad"
+              android:clickable="true"
+              android:gravity="center">
+
+    <TextView
+        android:id="@+id/view_dialer_button_text_textView_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textColor="@color/color_white"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/view_dialer_button_text_textView_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5px"
+        android:text="ABC"
+        android:textColor="@color/color_white"
+        android:textSize="15dp"/>
+
+</LinearLayout>

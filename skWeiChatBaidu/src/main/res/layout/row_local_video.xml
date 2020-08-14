@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_selector_background"
+                android:descendantFocusability="blocksDescendants"
+                android:padding="5dp">
+
+    <FrameLayout
+        android:id="@+id/left_layout"
+        android:layout_width="116.0dip"
+        android:layout_height="116.0dip"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <fm.jiecao.jcvideoplayer_lib.JVCideoPlayerStandardSecond
+            android:id="@+id/play_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/left_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/des_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/my_file_size"/>
+
+        <TextView
+            android:id="@+id/create_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2107-09-09"
+            android:textSize="@dimen/my_file_size"/>
+
+        <TextView
+            android:id="@+id/length_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2s"
+            android:textSize="@dimen/my_file_size"/>
+
+        <TextView
+            android:id="@+id/size_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="20kb"
+            android:textSize="@dimen/my_file_size"/>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/select_cb"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

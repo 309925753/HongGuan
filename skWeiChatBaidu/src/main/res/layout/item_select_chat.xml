@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_friend_warp"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/list_selector_background_ripple"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="15dp"
+    android:paddingRight="16dp">
+
+    <com.sk.weichat.view.HeadView
+        android:id="@+id/hvHead"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/hvHead"
+        android:layout_toStartOf="@+id/vDividerVertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNickName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/message_nick_size"
+            tools:text="@string/example_name" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vDividerVertical"
+        android:layout_width="0.1dp"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:layout_toStartOf="@+id/cbSelect"
+        android:background="@color/divbg"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/hvHead"
+        android:visibility="gone" />
+
+</RelativeLayout>

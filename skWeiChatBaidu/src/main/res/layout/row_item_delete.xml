@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/top_tv"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/Grey_400"
+        android:gravity="center"
+        android:padding="7dp"
+        android:singleLine="true"
+        android:text="@string/top_tv"
+        android:textColor="@color/white"
+        android:textSize="@dimen/one_level_title"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/read_unread_tv"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_read_unread_item"
+        android:gravity="center"
+        android:padding="7dp"
+        android:singleLine="true"
+        android:text="@string/mark_unread"
+        android:textColor="@color/white"
+        android:textSize="@dimen/one_level_title"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/delete_tv"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/redpacket_bg"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/one_level_title" />
+
+</LinearLayout>
+
+

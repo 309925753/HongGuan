@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="jc_start_button_w_h_normal">32dp</dimen>
+    <dimen name="jc_start_button_w_h_fullscreen">32dp</dimen>
+</resources>

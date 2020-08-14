@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <!--<uk.co.senab.photoview.PhotoView
+        android:id="@+id/iv_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <com.sk.weichat.view.ZoomImageView
+        android:id="@+id/iv_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout><!-- From: file:/Users/foamtrace/dev/AndroidStudioProjects/PhotoPicker/photopicker/src/main/res/layout/item_preview.xml -->

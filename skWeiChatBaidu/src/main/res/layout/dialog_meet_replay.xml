@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_dialog_meet_replay" />
+
+    <TextView
+        android:id="@+id/tvHangUpChat"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/dialog_bottom_cancel_margin"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/meet_replay_chat"
+        android:textColor="@color/dialog_normal"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialog_select_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/dialog_normal"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/list_selector_background_ripple"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginTop="15.0dip"
+        android:paddingLeft="5dp"
+        android:paddingRight="@dimen/dp5">
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/set_manager_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/avatar_normal"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/roles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/set_manager_iv"
+            android:background="@drawable/bg_role1"
+            android:padding="2dp"
+            android:text="@string/group_owner"
+            android:textColor="@color/app_white"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/set_manager_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/roles"
+            android:text=""
+            android:textSize="@dimen/me_title_size"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_marginLeft="69dp"
+        android:visibility="visible" />
+
+</LinearLayout>

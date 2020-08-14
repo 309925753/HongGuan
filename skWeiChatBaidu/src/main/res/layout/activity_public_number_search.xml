@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/keyword_rl"
+            style="@style/IMTble_No_Line"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/keyword_text"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/tip_search_public_number" />
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/keyword_edit"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/keyword_arrow_img"
+                android:layout_toRightOf="@+id/keyword_text"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:hint="@string/hint_search_public_number"
+                android:inputType="text"
+                android:maxLength="16" />
+
+            <ImageView
+                android:id="@+id/keyword_arrow_img"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sex_rl"
+            style="@style/IMTbleLine_UP"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/sex_text"
+                style="@style/IMTbleLine_TextKey"
+                android:drawablePadding="5dp" />
+
+            <TextView
+                android:id="@+id/sex_tv"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/sex_arrow_img"
+                android:layout_toRightOf="@+id/sex_text" />
+
+            <ImageView
+                android:id="@+id/sex_arrow_img"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/min_age_rl"
+            style="@style/IMTbleLine_UP"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/min_age_text"
+                style="@style/IMTbleLine_TextKey" />
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/min_age_edit"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/min_age_arrow_img"
+                android:layout_toRightOf="@+id/min_age_text"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:inputType="numberSigned" />
+
+            <ImageView
+                android:id="@+id/min_age_arrow_img"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/max_age_rl"
+            style="@style/IMTbleLine_UP"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/max_age_text"
+                style="@style/IMTbleLine_TextKey" />
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/max_age_edit"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/max_age_arrow_img"
+                android:layout_toRightOf="@+id/max_age_text"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:inputType="numberSigned" />
+
+            <ImageView
+                android:id="@+id/max_age_arrow_img"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/show_time_rl"
+            style="@style/IMTbleLine"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/show_time_text"
+                style="@style/IMTbleLine_TextKey" />
+
+            <TextView
+                android:id="@+id/show_time_tv"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toLeftOf="@+id/show_time_arrow_img"
+                android:layout_toRightOf="@+id/show_time_text" />
+
+            <ImageView
+                android:id="@+id/show_time_arrow_img"
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/search_btn"
+            style="@style/BossGreenBtn"
+            android:text="@string/search" />
+
+    </LinearLayout>
+
+</LinearLayout>

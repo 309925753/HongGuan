@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/local_course_rl"
+        style="@style/IMTbleLine"
+        android:layout_marginTop="@dimen/dp25"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fdy" />
+
+        <TextView
+            android:id="@+id/my_course_tv"
+            style="@style/IMTbleLine_TextName"
+            android:layout_centerVertical="true"
+            android:text="@string/band_phone" />
+
+        <TextView
+            android:id="@+id/tv_bind_phone"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_alignParentRight="true"
+            android:text="123123123"
+            android:textColor="@color/dark_dark_grey" />
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/IMTbleLine_TextName"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dp15"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:text="@string/other_login_way" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_band"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/wx_band_rl"
+            style="@style/IMTbleLine"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/share_wx" />
+
+            <TextView
+                style="@style/IMTbleLine_TextName"
+                android:layout_centerVertical="true"
+                android:text="@string/wechat" />
+
+            <TextView
+                android:id="@+id/tv_bind_wx"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/dark_dark_grey"
+                tools:text="123123123" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/qq_band_rl"
+            style="@style/IMTbleLine"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_qq_button" />
+
+            <TextView
+                style="@style/IMTbleLine_TextName"
+                android:layout_centerVertical="true"
+                android:text="@string/qq"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_bind_qq"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/dark_dark_grey"
+                tools:text="123123123" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

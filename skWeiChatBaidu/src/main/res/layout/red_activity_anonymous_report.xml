@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="匿名举报"
+            android:textColor="@color/color_333333"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="提交"
+            android:textColor="@color/color_FB719A"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_F5F5F5"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:text="请选择举报原因"
+                android:textColor="@color/color_999999"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:button="@drawable/red_selector_radiobutton"
+                    android:layoutDirection="rtl"
+                    android:text="发广告"
+                    android:textDirection="ltr" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_DFDFDF" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:button="@drawable/red_selector_radiobutton"
+                    android:layoutDirection="rtl"
+                    android:text="骚扰/谩骂/不文明聊天"
+                    android:textDirection="ltr" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_DFDFDF" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:button="@drawable/red_selector_radiobutton"
+                    android:layoutDirection="rtl"
+                    android:text="色情低俗"
+                    android:textDirection="ltr" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_DFDFDF" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:button="@drawable/red_selector_radiobutton"
+                    android:layoutDirection="rtl"
+                    android:text="她是骗子"
+                    android:textDirection="ltr" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_DFDFDF" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_F5F5F5"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:text="请提供相关截图，以便我们跟进核实"
+                android:textColor="@color/color_999999"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_F5F5F5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="14dp"
+                    android:text="补充描述"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="选填"
+                    android:maxLength="200"
+                    android:padding="16dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/color_F5F5F5" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

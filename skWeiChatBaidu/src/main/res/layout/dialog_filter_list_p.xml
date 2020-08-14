@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_picture"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/bg_filter_select"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="36dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_seekbar_beauty"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/layout_facesurgery"
+            layout="@layout/face_surgery_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="滤镜"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="0.6dp"
+            android:layout_height="14dp"
+            android:background="@color/action_bar_tittle_color" />
+
+        <TextView
+            android:id="@+id/tv_beauty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="美颜"
+            android:textColor="@color/action_bar_tittle_color" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_above="@id/ll_bottom_bar" />
+
+</RelativeLayout>

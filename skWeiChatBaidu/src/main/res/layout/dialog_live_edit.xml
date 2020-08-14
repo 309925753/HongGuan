@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/bg_live_user_dialog">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:padding="12dp"
+            app:srcCompat="@mipmap/icon_live_user_cancle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="19dp"
+                android:visibility="visible"
+                tools:src="@drawable/default_head" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="11dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="@string/example_name" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_live_edit_row"
+                android:paddingStart="10dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/ivEditName"
+                    android:background="@null"
+                    android:hint="@string/live_name"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp"
+                    tools:text="@string/example_message_content" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:background="@null"
+                    android:layout_toStartOf="@+id/ivEditName"
+                    android:cursorVisible="true"
+                    android:hint="@string/live_name"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    tools:text="@string/example_message_content" />
+
+                <TextView
+                    android:id="@+id/ivEditName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="14dp"
+                    android:text="@string/transfer_modify"
+                    android:textColor="@color/app_skin_blue"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_live_edit_row"
+                android:paddingStart="10dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvNotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/ivNoticeName"
+                    android:background="@null"
+                    android:hint="@string/live_content"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp"
+                    tools:text="@string/example_message_content" />
+
+                <EditText
+                    android:id="@+id/etNotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/ivNoticeName"
+                    android:background="@null"
+                    android:hint="@string/live_content"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    tools:text="@string/example_message_content" />
+
+                <TextView
+                    android:id="@+id/ivNoticeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="14dp"
+                    android:text="@string/transfer_modify"
+                    android:textColor="@color/app_skin_blue"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="19dp"
+                android:paddingBottom="19dp"
+                android:singleLine="true"
+                android:text="@string/main_page_ta"
+                android:textColor="@color/app_skin_blue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

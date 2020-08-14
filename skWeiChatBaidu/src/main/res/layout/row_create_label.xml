@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp">
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/label_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar_normal" />
+
+        <TextView
+            android:id="@+id/label_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        style="@style/View_Line"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="64dp" />
+
+</LinearLayout>

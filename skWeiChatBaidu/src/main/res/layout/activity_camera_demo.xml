@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/glviewFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#000000">
+
+            <ImageView
+                android:id="@+id/beijingtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/timebeijing"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/daojishi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="00:00"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/shaguangdeng"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:padding="2dp"
+                android:src="@drawable/shanguangdeng"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <org.wysaid.view.CameraRecordGLSurfaceView
+            android:id="@+id/myGLSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="150dp"
+            android:layout_marginTop="60dp"/>
+
+        <RelativeLayout
+            android:id="@+id/luzhijiemian1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#000000"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/flashBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:text="Flash"
+                android:textAllCaps="false"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/recordBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/luzhishaper"/>
+
+            <ImageView
+                android:id="@+id/switchCameraBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_switch_camera"/>
+
+            <ImageView
+                android:id="@+id/quxiaole"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:src="@mipmap/bubaochun"/>
+
+        </RelativeLayout>
+
+        <com.sk.weichat.view.HorizontalListView
+            android:id="@+id/texiao"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="60dp"
+            android:background="#000000">
+        </com.sk.weichat.view.HorizontalListView>
+
+    </FrameLayout>
+
+</RelativeLayout>

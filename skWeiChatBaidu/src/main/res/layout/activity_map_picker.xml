@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sk.weichat.view.MergerStatus
+        android:id="@+id/mergerStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <com.sk.weichat.view.SkinImageView
+                android:id="@+id/iv_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@mipmap/return_icon"
+                android:tint="@color/black" />
+
+            <com.sk.weichat.view.SkinTextView
+                android:id="@+id/tv_title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="middle"
+                android:maxWidth="200dp"
+                android:padding="@dimen/dp10"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/sp_18_text_size" />
+
+            <com.sk.weichat.view.SkinTextView
+                android:id="@+id/tv_title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:maxWidth="100dp"
+                android:maxLines="1"
+                android:paddingLeft="6dp"
+                android:paddingTop="3dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="3dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15_text_size" />
+
+        </RelativeLayout>
+
+    </com.sk.weichat.view.MergerStatus>
+
+    <RelativeLayout
+        android:id="@+id/rl_map_position"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/map_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_seach_position" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_above="@+id/ll_seach_position"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/iv_location_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll_seach_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rv_map_position"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15">
+
+            <com.sk.weichat.view.ClearEditText
+                android:id="@+id/ce_map_position"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_weight="1"
+                android:background="@drawable/et_search_bg"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="9dp"
+                android:gravity="center_vertical"
+                android:hint="@string/search_position"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/sp_13_text_size" />
+
+            <TextView
+                android:id="@+id/tv_keyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-15dp"
+                android:gravity="center"
+                android:onClick="cancelKeyBoard"
+                android:padding="9dp"
+                android:text="@string/cancel"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_15_text_size"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_map_position"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp200"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_12"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_marginRight="@dimen/dp40"
+    android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_program"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_comm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="匿名举报"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp"
+            android:background="@color/color_DFDFDF" />
+            <TextView
+                android:id="@+id/tv_dynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="拉黑"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

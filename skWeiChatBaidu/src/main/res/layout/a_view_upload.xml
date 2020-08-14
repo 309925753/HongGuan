@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/chat_up_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:visibility="gone">
+
+    <!-- <ProgressBar
+         android:layout_width="60dp"
+         android:layout_height="60dp"
+         android:layout_centerInParent="true"/>
+
+     <TextView
+         android:id="@+id/chat_up_tv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:text="0%"
+         android:textColor="@color/app_white"
+         android:textSize="@dimen/sp_18_text_size"/>-->
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/chat_up_pb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

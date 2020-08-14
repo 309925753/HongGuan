@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/search_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/search" />
+
+                    <EditText
+                        android:id="@+id/search_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:background="@null"
+                        android:hint="@string/search"
+                        android:textSize="@dimen/message_search_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSelectExtension"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/full_divider"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/select_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+
+            <com.sk.weichat.sortlist.SideBar
+                android:id="@+id/sidebar"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_slide_selected"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_slide_bar_text_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/next_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Grey_100"
+        android:gravity="center"
+        android:text="@string/next_step"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/one_level_title" />
+
+</LinearLayout>

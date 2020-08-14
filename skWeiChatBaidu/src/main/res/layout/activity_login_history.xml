@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/avatar_img"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/account_avatar_bg"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="5.0dip"
+                android:paddingLeft="4.0dip"
+                android:paddingRight="6.0dip"
+                android:paddingTop="5.0dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_normal" />
+
+            <TextView
+                android:id="@+id/nick_name_tv"
+                style="@style/IMLineEditText"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:background="@null"
+                android:gravity="center"
+                android:minHeight="40dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <com.sk.weichat.view.ClearEditText
+                    android:id="@+id/password_edit"
+                    style="@style/EditTextWithLeftIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="@string/digits_password"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:hint="@string/please_input_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ToggleButton
+                    android:id="@+id/tbEye"
+                    style="@style/PasswordEye" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/login_btn"
+                style="@style/BossGreenBtn"
+                android:layout_width="match_parent"
+                android:text="@string/login" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/register_account_btn"
+                    style="@style/IMHyperText"
+                    android:layout_alignParentLeft="true"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="@string/register_account"
+                    android:textColor="@color/app_skin_black"
+                    android:textSize="@dimen/sp_13_text_size" />
+
+                <Button
+                    android:id="@+id/switch_account_btn"
+                    style="@style/IMHyperText"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="@string/switch_account_way"
+                    android:textColor="@color/app_skin_black"
+                    android:textSize="@dimen/sp_13_text_size"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/forget_password_btn"
+                    style="@style/IMHyperText"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="@string/forget_password"
+                    android:textColor="@color/app_skin_black"
+                    android:textSize="@dimen/sp_13_text_size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

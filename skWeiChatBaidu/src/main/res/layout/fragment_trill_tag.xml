@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151621">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/trill_tag_style_img"
+                    android:src="@drawable/ic_trill_tag0"/>
+
+                <TextView
+                    style="@style/trill_tag_style_text"
+                    android:text="切换"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/trill_tag_style_img"
+                    android:src="@drawable/ic_trill_tag0"/>
+
+                <TextView
+                    style="@style/trill_tag_style_text"
+                    android:text="切换"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/trill_tag_style_img"
+                    android:src="@drawable/ic_trill_tag0"/>
+
+                <TextView
+                    style="@style/trill_tag_style_text"
+                    android:text="切换"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/trill_tag_style_img"
+                    android:src="@drawable/ic_trill_tag0"/>
+
+                <TextView
+                    style="@style/trill_tag_style_text"
+                    android:text="切换"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/trill_tag_style_img"
+                    android:src="@drawable/ic_trill_tag0"/>
+
+                <TextView
+                    style="@style/trill_tag_style_text"
+                    android:text="切换"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_tag"
+            android:layout_marginTop="15dp"></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/headview">-->
+    <!--</android.support.v7.widget.RecyclerView>-->
+

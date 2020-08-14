@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sk.weichat.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.groupchat.RoomSearchResultActivity">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <fragment
+        android:id="@+id/fRoomList"
+        android:name="com.sk.weichat.ui.groupchat.AllRoomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.sk.weichat.view.MyLinearLayout>

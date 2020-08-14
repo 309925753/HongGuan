@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/screen_filetrans_view_relativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_gravity="center"
+                  android:isScrollContainer="true"
+                  android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/screen_filetrans_view_textView_cname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:background="@color/color_light"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:text="unknown.3gp"
+            android:textColor="@color/color_white"
+            android:textSize="20px"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/screen_filetrans_view_textView_remoteParty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="sip:unknown@open-ims.test"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/screen_filetrans_view_imageView_preview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/screen_filetrans_view_textView_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3px"
+                android:layout_marginLeft="5px"
+                android:background="@color/color_dark"
+                android:text="Sending content..."
+                android:textColor="@color/color_white"
+                android:textSize="16px"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/screen_filetrans_view_textView_byteRange"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5px"
+                android:text="*-*/*"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ProgressBar
+                    android:id="@+id/screen_filetrans_view_progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3px"
+                    android:layout_weight="3"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/screen_filetrans_view_button_accept"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="2px"
+                        android:background="@drawable/sel_green"
+                        android:text="Accept"
+                        android:textColor="@color/color_white"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/screen_filetrans_view_button_abort"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="2px"
+                        android:background="@drawable/sel_red"
+                        android:text="Abort"
+                        android:textColor="@color/color_white"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

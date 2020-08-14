@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:paddingBottom="7dp">
+
+    <com.sk.weichat.view.CircleImageView
+        android:id="@+id/content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        tools:src="@drawable/avatar_normal" />
+
+    <TextView
+        android:id="@+id/member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxEms="4"
+        android:maxLines="1"
+        android:textColor="@color/Grey_600"
+        android:textSize="@dimen/two_level_content"
+        tools:text="@string/app_name" />
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设置圆角大小-->
+    <corners
+        android:bottomLeftRadius="6dp"
+        android:bottomRightRadius="6dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp" />
+    <!--设置背景颜色渐变-->
+    <gradient
+        android:angle="90"
+        android:endColor="#00000000"
+        android:startColor="#4c000000" />
+</shape>

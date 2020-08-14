@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/go_basic_rl"
+                style="@style/IMTble_No_Line"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <com.sk.weichat.view.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/avatar_normal" />
+
+                <com.sk.weichat.view.CircleImageView
+                    android:id="@+id/add_contacts"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/avatar"
+                    android:src="@drawable/bg_room_info_add_btn" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/avatar"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/Grey_800"
+                    android:textSize="@dimen/sp_14_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/remark_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/remark_name"
+                    android:textColor="@color/Grey_800"
+                    android:textSize="@dimen/one_level_title" />
+
+                <TextView
+                    android:id="@+id/remark_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_toLeftOf="@+id/go_set_iv"
+                    android:layout_toRightOf="@+id/tv"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_16_text_size" />
+
+                <View
+                    style="@style/View_Line"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/go_set_iv"
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/label_rl"
+                style="@style/IMTble_No_Line">
+
+                <View style="@style/View_Line" />
+
+                <TextView
+                    android:id="@+id/label_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/tag"
+                    android:textColor="@color/Grey_800"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_toLeftOf="@+id/go_set_iv2"
+                    android:layout_toRightOf="@+id/label_tv"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#999999"
+                    android:textSize="@dimen/sp_16_text_size" />
+
+                <ImageView
+                    android:id="@+id/go_set_iv2"
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chat_history_search"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/search_chat_content"
+                    android:textColor="@color/Grey_800"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transfer"
+                style="@style/IMTble_No_Line">
+
+                <View style="@style/View_Line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/transfer_record"
+                    android:textColor="@color/Grey_800"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/delete_after_read"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_read_fire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IMTble_No_Line">
+
+                <View style="@style/View_Line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/pined_session"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_top_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IMTble_No_Line">
+
+                <View style="@style/View_Line" />
+
+                <TextView
+                    android:id="@+id/no_disturb_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/message_avoidance"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_no_disturb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transmission_public"
+                style="@style/IMTbleLine_UP"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/msg_transmission_public"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_transmission_public"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transmission_desed"
+                style="@style/IMTbleLine_UP"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/msg_transmission_desed"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_transmission_desed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transmission_aes"
+                style="@style/IMTbleLine_UP"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/msg_transmission_aes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_transmission_aes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transmission_asymmetric_aes"
+                style="@style/IMTbleLine"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/msg_transmission_asymmetric_aes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <com.sk.weichat.view.SwitchButton
+                    android:id="@+id/sb_transmission_asymmetric_aes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transmission_select"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/tip_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/msg_transmission_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <TextView
+                    android:id="@+id/rl_transmission_select_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_toStartOf="@+id/rl_transmission_select_iv"
+                    android:layout_toEndOf="@+id/tip_tv"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_13_text_size"
+                    tools:text="@string/msg_transmission_public" />
+
+                <ImageView
+                    android:id="@+id/rl_transmission_select_iv"
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/msg_save_days_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/msg_save_days_desc_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/message_auto_delete"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <TextView
+                    android:id="@+id/msg_save_days_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_toStartOf="@+id/msg_save_days_iv"
+                    android:layout_toEndOf="@+id/msg_save_days_desc_iv"
+                    android:gravity="right"
+                    android:text="@string/one_day"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/msg_save_days_iv"
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_background_rl"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/chat_background"
+                    android:textColor="@color/Grey_800"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    style="IMTbleLine_ArrowImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/right_arrow_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chat_history_empty"
+                style="@style/IMTble_No_Line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/clean_chat_history"
+                    android:textColor="@color/Grey_800"
+                    android:textSize="@dimen/one_level_title" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sync_chat_history_empty"
+                style="@style/IMTble_No_Line">
+
+                <View style="@style/View_Line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/sync_chat_history_clean"
+                    android:textColor="@color/Grey_800"
+                    android:textSize="@dimen/one_level_title" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

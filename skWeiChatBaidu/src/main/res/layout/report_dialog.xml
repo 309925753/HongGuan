@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_for_shatup">
+
+    <ListView
+        android:divider="@drawable/report_divider"
+        android:paddingBottom="@dimen/dp5"
+        android:id="@+id/report_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp5"
+        android:dividerHeight="0.1dp"/>
+
+</LinearLayout>

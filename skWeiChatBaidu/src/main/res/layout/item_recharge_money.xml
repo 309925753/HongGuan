@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <CheckedTextView
+        android:id="@+id/tvRechargeMoney"
+        android:layout_width="86dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/recharge_money_bg_selector"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        tools:text="@string/example_money"
+        tools:textColor="#ff80bfff" />
+
+</RelativeLayout>

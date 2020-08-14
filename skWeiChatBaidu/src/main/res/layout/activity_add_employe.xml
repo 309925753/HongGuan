@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tb"
+        layout="@layout/a_view_actionbar" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/added_layout"
+        android:layout_below="@id/tb"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="0px"
+        android:gravity="fill"
+        android:scrollbars="none" />
+
+    <View
+        style="@style/View_Line"
+        android:layout_above="@+id/added_layout" />
+
+    <RelativeLayout
+        android:id="@+id/added_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="7dp">
+
+        <Button
+            android:id="@+id/ok_btn"
+            style="@style/OKBtn"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <com.sk.weichat.view.HorizontalListView xmlns:widget="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/horizontal_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ok_btn"
+            android:divider="@color/transparent"
+            widget:dividerWidth="5dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

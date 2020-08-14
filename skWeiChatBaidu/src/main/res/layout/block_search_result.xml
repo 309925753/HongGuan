@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llSearchResultBlock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/bg_search_result_block"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/ivResultType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="42dp"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        tools:text="@string/group_chat" />
+
+    <View style="@style/View_Line" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_search_result_contacts" />
+
+    <RelativeLayout
+        android:id="@+id/rlMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="42dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginStart="62dp"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/search" />
+
+            <TextView
+                android:id="@+id/tvMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:textColor="#576B95"
+                android:textSize="12sp"
+                tools:text="更多群聊" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

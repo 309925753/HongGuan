@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- repeatCount:重复次数 | -1为一直重复，当为1时，动画执行两次(android动画默认只执行一次)-->
+    <rotate
+        android:duration="400"
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="-1"
+        android:toDegrees="360"/>
+</set>

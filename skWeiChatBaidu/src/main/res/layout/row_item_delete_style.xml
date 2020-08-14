@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/item_edit_style1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/dp5"
+        android:layout_weight="1"
+        android:background="@drawable/bg_circle_white"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/edit" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_delete_style1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_weight="1"
+        android:background="@drawable/bg_circle_white"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/sk_item_delete" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

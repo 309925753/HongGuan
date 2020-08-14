@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"
+        android:background="@drawable/a_bg_for_input_payment"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/a_avatar_iv"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                tools:src="@drawable/avatar_normal" />
+
+            <TextView
+                android:id="@+id/a_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/app_black"
+                android:textSize="@dimen/sp_16_text_size"
+                tools:text="驻美国大使馆大使" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/a_input_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/account_edit_bg"
+            android:digits="@string/digits"
+            android:maxLength="16"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/sk_account_single_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:paddingTop="10dp"
+            android:text="fdsf"
+            android:textColor="@color/Grey_600"
+            android:textSize="@dimen/sp_13_text_size" />
+
+        <Button
+            android:id="@+id/a_sure_btn"
+            style="@style/BossGreenBtn"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/dp30"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@string/sure" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:gravity="center"
+    android:paddingLeft="@dimen/dp40"
+    android:paddingTop="10dp"
+    android:paddingRight="@dimen/dp40"
+    android:paddingBottom="1dp">
+
+    <TextView
+        android:id="@+id/chat_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tip_drawable"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="2dp"
+        android:text="@string/system_message"
+        android:textColor="@color/system_default_text_color"
+        android:textSize="12sp" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/chat_content_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/system_name"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:lineSpacingExtra="3dp"-->
+    <!--android:lineSpacingMultiplier="1.2"-->
+    <!--android:text="@string/example_system_message_tip"-->
+    <!--android:textColor="@color/chat_background"-->
+    <!--android:textSize="@dimen/me_title_size"-->
+    <!--android:visibility="v12"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_content_tvs"-->
+    <!--style="@style/ChattingUISystem"-->
+    <!--android:background="@drawable/chatsystem_bg"-->
+    <!--android:gravity="left"-->
+    <!--android:text="123123123"-->
+    <!--android:visibility="gone"/>-->
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

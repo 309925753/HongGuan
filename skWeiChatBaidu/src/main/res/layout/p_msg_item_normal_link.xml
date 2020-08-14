@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/link_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/normal_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <ImageView
+            android:id="@+id/link_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon" />
+
+        <TextView
+            android:id="@+id/link_text_tv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingBottom="4dp"
+            android:paddingLeft="9dp"
+            android:paddingTop="4dp"
+            android:text="曼淮的回答，已获得 1574 人赞同曼淮的回答，已获得 1574 人赞同 曼淮的回答，已获得 1574 人赞同 曼淮的回答，已获得 1574 人赞同 曼淮的回答，已获得 1574 人赞同 曼淮的回答，已获得 1574 人赞同 曼淮的回答，已获得 1574 人赞同 曼淮的回答，已获得 1574 人赞同 曼淮的回答，已获得 1574 人赞同  "
+            android:textSize="@dimen/sp_14_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

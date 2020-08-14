@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/chat_item_padding_bottom"
+    android:paddingLeft="@dimen/chat_item_padding_left"
+    android:paddingRight="@dimen/chat_item_padding_right"
+    android:paddingTop="@dimen/chat_item_padding_top">
+
+    <TextView
+        android:id="@+id/time_tv"
+        style="@style/ChattingUISystem"
+        android:visibility="gone" />
+
+    <com.sk.weichat.view.HeadView
+        android:id="@+id/chat_head_iv"
+        android:layout_width="@dimen/chat_head_size"
+        android:layout_height="@dimen/chat_head_size"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/time_tv"
+        android:layout_marginEnd="@dimen/chat_head_right"
+        android:layout_marginStart="@dimen/chat_head_left"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/avatar_normal" />
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toLeftOf="@id/chat_head_iv"
+        android:text=""
+        android:textSize="@dimen/SmallerTextSize"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/chat_warp_view"
+        android:layout_width="@dimen/chat_form_info_width"
+        android:layout_height="110dp"
+        android:layout_below="@id/nick_name"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toLeftOf="@id/chat_head_iv"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/chat_address_tv"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/a_bg_for_chat_location2"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:textSize="@dimen/SmallerTextSize" />
+
+        <com.sk.weichat.view.RoundView
+            android:id="@+id/chat_address_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/chat_address_tv"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chat_map_bg" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_holder_state_from" />
+
+    <CheckBox
+        android:id="@+id/chat_msc"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/chat_warp_view"
+        android:clickable="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

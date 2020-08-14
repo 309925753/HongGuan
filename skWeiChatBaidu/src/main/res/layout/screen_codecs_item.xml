@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="#EBEBEB"
+              android:descendantFocusability="blocksDescendants"
+              android:paddingBottom="5px"
+              android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/screen_codecs_item_textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMR-NB-BE"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/me_title_size"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/screen_codecs_item_textView_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMR Narrow Band Bandwidth Efficient (8 KHz)"
+            android:textSize="@dimen/me_title_size"/>
+        <View
+            android:layout_marginTop="6dp"
+            style="@style/View_Line" />
+    </LinearLayout>
+    <CheckBox
+        android:id="@+id/screen_codecs_item_checkView_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:enabled="false"
+        android:layout_gravity="center"
+        android:layout_toRightOf="@+id/screen_codecs_item_textView_description"
+        android:layout_weight="0"/>
+</LinearLayout>

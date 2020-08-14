@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sk.weichat.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_2"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.message.QuickSendPreviewActivity">
+
+    <com.sk.weichat.view.MergerStatus
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <com.sk.weichat.view.SkinImageView
+                android:id="@+id/iv_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="14dp"
+                android:src="@mipmap/return_icon"
+                android:tint="@color/white" />
+
+            <com.sk.weichat.view.SkinTextView
+                android:id="@+id/tv_title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="middle"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/title_center_text_size" />
+
+            <com.sk.weichat.view.SkinImageView
+                android:id="@+id/iv_title_right"
+                android:layout_width="@dimen/menu_item_size"
+                android:layout_height="@dimen/menu_item_size"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_title_right"
+                android:padding="14dp"
+                android:src="@mipmap/image_ic_doodle" />
+
+            <com.sk.weichat.view.SkinTextView
+                android:id="@+id/tv_title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxWidth="100dp"
+                android:maxLines="1"
+                android:text="@string/send"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/title_right_text_size" />
+
+        </RelativeLayout>
+
+    </com.sk.weichat.view.MergerStatus>
+
+    <com.sk.weichat.view.ZoomImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</com.sk.weichat.view.MyLinearLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:paddingTop="30dp">
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="红豆红包"
+            android:textColor="@color/color_333333"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_back" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/monry_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/shape_white_6"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+            android:layout_below="@+id/rl_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/redly2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/JinETv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="红豆"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/sp_16_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/edit_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="35dp"
+                    android:background="#0000"
+                    android:gravity="center_vertical|right"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_16_text_size" />
+
+                <TextView
+                    android:id="@+id/yuanTv"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:text="个"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/sp_16_text_size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/switch_thumb_normal_material_dark"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_blessing_ly"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/monry_ly"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_white_6"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/fengexian3"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/edit_blessing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="#0000"
+                android:gravity="center_vertical|left"
+                android:hint="小小意思，拿去浪吧"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_16_text_size" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/switch_thumb_normal_material_dark"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_blessing_ly"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginBottom="@dimen/dp15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp5"
+            android:text="¥"
+            android:textColor="@color/black"
+            android:visibility="invisible"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_amount_of_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/black"
+            android:drawableLeft="@mipmap/red_ic_red_bean"
+            android:drawablePadding="@dimen/dp5"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sendRed"
+        style="@style/BossGreenBtn"
+        android:layout_below="@+id/ll_scan"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_fb719a_5"
+        android:layout_marginTop="@dimen/dp200"
+        android:text="塞币进红包" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="如果对方24小时内没有领取红包，金额将原路退回到你的支付宝/微信"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        android:layout_below="@+id/btn_sendRed"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

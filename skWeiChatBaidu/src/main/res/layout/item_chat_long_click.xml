@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp10"
+    android:paddingRight="@dimen/dp10">
+
+    <LinearLayout
+        android:id="@+id/item_chat_text_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chat_text_long"
+        android:divider="@drawable/divider_long_click_window"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/item_chat_copy_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/copy"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_replay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/replay_button"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_relay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/forward"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_collection_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/save_emoticon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/collection_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/collection"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/With_draw"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_del_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_more_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/multi_select"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/record_course"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content" />
+
+        <TextView
+            android:id="@+id/item_chat_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/chat_speaker"
+            android:textColor="@color/white"
+            android:textSize="@dimen/three_level_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

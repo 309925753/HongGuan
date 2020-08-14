@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/item_chat_text_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/item_chat_copy_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/copy"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_replay_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/replay_button"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_relay_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/forward"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_collection_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:text="@string/save_emoticon"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/collection_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/collection"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_back_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/With_draw"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_del_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/delete"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_more_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:text="@string/multi_select"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:text="@string/record_course"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <TextView
+            android:id="@+id/item_chat_speaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_selector_background_ripple"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:text="@string/chat_speaker"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/map_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/normal_bg">
+
+        <ImageView
+            android:id="@+id/iv_title_left"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:padding="9dp"
+            android:src="@mipmap/ic_title_black_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_title_left"
+            android:text="@string/local_map"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_left_text_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/normal_bg">
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_left_text_size" />
+
+        <ImageView
+            android:id="@+id/dh_iv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:padding="7dp"
+            android:src="@drawable/daohang" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

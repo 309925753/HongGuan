@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/chat_item_padding_bottom"
+    android:paddingLeft="@dimen/chat_item_padding_left"
+    android:paddingRight="@dimen/chat_item_padding_right"
+    android:paddingTop="@dimen/chat_item_padding_top">
+
+    <TextView
+        android:id="@+id/time_tv"
+        style="@style/ChattingUISystem"
+        android:visibility="gone" />
+
+    <com.sk.weichat.view.HeadView
+        android:id="@+id/chat_head_iv"
+        android:layout_width="@dimen/chat_head_size"
+        android:layout_height="@dimen/chat_head_size"
+        android:layout_below="@id/time_tv"
+        android:layout_marginEnd="@dimen/chat_head_right"
+        android:layout_marginStart="@dimen/chat_head_left"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_msc"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/avatar_normal" />
+
+    <CheckBox
+        android:id="@+id/chat_msc"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/chat_head_iv"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:text="123123123"
+        android:textSize="@dimen/SmallerTextSize"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/chat_warp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nick_name"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:background="@drawable/chat_to_warp_bg"
+        android:minHeight="@dimen/chat_head_size"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/chat_text_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="2dp"
+            android:src="@mipmap/end_of_voice_call_icon" />
+
+        <TextView
+            android:id="@+id/chat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#333333"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/chat_text_img"
+            android:maxWidth="210dp"
+            android:paddingLeft="@dimen/chat_text_left_pd"
+            android:paddingRight="@dimen/chat_text_right_pd"
+            android:text="已取消"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_holder_state_to" />
+
+</RelativeLayout>

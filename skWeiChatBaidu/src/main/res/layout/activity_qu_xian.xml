@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/a_bg_for_payment"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/withdrawal_amount"
+            android:textSize="@dimen/one_level_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="￥"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_20_text_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tixianmoney"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="@color/app_black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/money_sum"
+                android:textSize="@dimen/sp_13_text_size" />
+
+            <TextView
+                android:id="@+id/blance_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tixianall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/all_withdrawals"
+                android:textColor="@color/button_text"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/tixian_ll"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/back_withdraw_wx">
+
+            <TextView
+                android:id="@+id/tixian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/withdraw_wechat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/one_level_title" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@+id/tixian"
+                android:padding="7dp"
+                android:src="@drawable/wechat_quxian" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/withdraw_alipay_ll"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/back_withdraw_alipay">
+
+            <TextView
+                android:id="@+id/withdraw_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/withdraw_alipay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/one_level_title" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@+id/withdraw_alipay"
+                android:padding="7dp"
+                android:src="@drawable/zfb_quxian" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/withdraw_back"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/back_withdraw"
+            android:gravity="center"
+            android:text="@string/back_withdraw"
+            android:textColor="@color/white"
+            android:textSize="@dimen/one_level_title"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/tip_withdraw_cost"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

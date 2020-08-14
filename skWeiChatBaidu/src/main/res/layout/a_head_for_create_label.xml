@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/head_for_add_label"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/list_selector_background_ripple"
+              android:descendantFocusability="blocksDescendants"
+              android:orientation="horizontal"
+              android:paddingBottom="18dp"
+              android:paddingLeft="9dp"
+              android:paddingTop="18dp">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/add_members_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:gravity="center_vertical"
+        android:text="@string/create_tag"
+        android:textColor="@color/app_skin_green"
+        android:textSize="@dimen/title_right_text_size"/>
+
+</LinearLayout>

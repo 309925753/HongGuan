@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QrCode</string>
+    <string name="scanner_view_tip_text">将二维码/条形码放入框内，即可自动扫描</string>
+    <string name="check_net">当前网络不可用\n请检查网络设置</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tip_decode_failed">解码失败</string>
+    <string name="title_qr_code_or_banner_code">二维码/条形码</string>
+
+    <string name="photo_shop">相册</string>
+    <string name="me_scan_you">我扫你</string>
+    <string name="you_scan_me">你扫你</string>
+</resources>

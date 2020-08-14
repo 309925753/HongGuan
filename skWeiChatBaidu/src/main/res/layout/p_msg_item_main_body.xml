@@ -1,0 +1,318 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingTop="14dp"
+        android:paddingRight="@dimen/dp15">
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/avatar_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            tools:src="@drawable/avatar_normal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nick_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="昵称"
+                android:textSize="@dimen/bussic_nick_name_size" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/bussic_time_size"
+                    tools:text="10:08" />
+
+                <TextView
+                    android:id="@+id/delete_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/time_tv"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/link_nick_name_color"
+                    android:textSize="@dimen/bussic_time_size"
+                    tools:text="@string/cancel_collection" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llReport"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <com.sk.weichat.view.CheckableImageView
+                android:id="@+id/ivReport"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/report" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="65dp"
+        android:paddingTop="11dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <com.sk.weichat.util.link.HttpTextView
+                    android:id="@+id/body_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.3"
+                    android:maxLines="6"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/bussic_content_size" />
+
+                <!--  <com.sk.weichat.util.link.HttpTextView
+                      android:id="@+id/body_tvS"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/bussic_content_size"
+                      android:visibility="gone" />-->
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/open_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/weibo_cell_all_text"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/bussic_content_size"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/content_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llOperator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/llCollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:gravity="start|bottom"
+                        android:orientation="horizontal">
+
+                        <com.sk.weichat.view.CheckableImageView
+                            android:id="@+id/ivCollection"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/checkable_collection" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:orientation="horizontal">
+
+                        <com.sk.weichat.view.CheckableImageView
+                            android:id="@+id/ivComment"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/checkable_comment" />
+
+                        <TextView
+                            android:id="@+id/tvComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:text=""
+                            android:textColor="@color/link_nick_name_color"
+                            android:textSize="@dimen/bussic_time_size"
+                            tools:text="250" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llThumb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:gravity="end|bottom"
+                        android:orientation="horizontal">
+
+                        <com.sk.weichat.view.CheckableImageView
+                            android:id="@+id/ivThumb"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/checkable_thumb" />
+
+                        <TextView
+                            android:id="@+id/tvThumb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:text=""
+                            android:textColor="@color/link_nick_name_color"
+                            android:textSize="@dimen/bussic_time_size"
+                            tools:text="1314" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/bussic_time_size"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@color/comment_background"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_prise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="2dp"
+                    android:paddingBottom="@dimen/dp5"
+                    android:src="@drawable/icon_nice_circle" />
+
+                <TextView
+                    android:id="@+id/multi_praise_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp5"
+                    android:textSize="@dimen/bussic_praise_size" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/line_v"
+                style="@style/View_Line"
+                android:visibility="visible" />
+
+            <com.sk.weichat.view.MyListView
+                android:id="@+id/command_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/comment_background" />
+
+            <TextView
+                android:id="@+id/tvLoadMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/comment_background"
+                android:gravity="center"
+                android:text="@string/tip_load_more"
+                android:textColor="@color/link_nick_name_color"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_marginTop="14dp" />
+
+</LinearLayout>

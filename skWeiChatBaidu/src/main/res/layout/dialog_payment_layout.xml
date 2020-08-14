@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp15"
+    android:background="@drawable/shape_white_12"
+    >
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/delete_icon_blue"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_15_text_size"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/tv_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="￥30.00"
+            android:textColor="#ffff421d"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_pay"
+            android:layout_marginTop="@dimen/dp40"
+            />
+        <TextView
+            android:id="@+id/tv_red_nums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="300红豆"
+            android:textColor="@color/color_999999"
+            android:textSize="15sp"
+            android:layout_below="@+id/tv_pay_money"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="65dp"
+        android:paddingRight="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13dp"
+                android:src="@mipmap/red_ic_pay_alipay" />
+            <RadioButton
+                android:id="@+id/rb_alipay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:button="@drawable/red_selector_radiobutton"
+                android:layoutDirection="rtl"
+                android:text="支付宝"
+                android:textColor="@color/color_333333"
+                android:textDirection="ltr"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13dp"
+                android:src="@mipmap/red_ic_pay_wechat" />
+
+            <RadioButton
+                android:id="@+id/rb_wechat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:button="@drawable/red_selector_radiobutton"
+                android:layoutDirection="rtl"
+                android:text="微信支付"
+                android:textColor="@color/color_333333"
+                android:textDirection="ltr"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RadioGroup>
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/shape_fb719a_6"
+        android:gravity="center"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:textSize="18sp" />
+</LinearLayout>

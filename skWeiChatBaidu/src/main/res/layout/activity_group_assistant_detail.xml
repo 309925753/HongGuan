@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/iv1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_notice" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:text="@string/auto_reply_assistant"
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/OKBtn_Small"
+                android:text="@string/add_to"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/OKBtn_Small"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/collection_bg_2"
+                android:text="@string/delete"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/auto_reply_assistant_desc"
+        android:textColor="@color/Grey_600"
+        android:textSize="@dimen/sp_13_text_size" />
+
+    <View
+        style="@style/View_Line"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/developer"
+        android:textColor="@color/Grey_600"
+        android:textSize="@dimen/sp_12_text_size" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/disclaimer"
+        android:textColor="@color/Grey_600"
+        android:textSize="@dimen/sp_12_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/normal_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/keyword_has_been_add"
+            android:textColor="@color/Grey_600"
+            android:textSize="@dimen/sp_15_text_size" />
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:padding="9dp"
+            android:src="@drawable/ic_collection_set" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_not_found" />
+
+        <TextView
+            android:id="@+id/add_group_assistant_keyword_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/group_assistant_not_has_keyword"
+            android:textColor="@color/Grey_600"
+            android:textSize="@dimen/sp_13_text_size" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/OKBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:text="@string/add_to" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

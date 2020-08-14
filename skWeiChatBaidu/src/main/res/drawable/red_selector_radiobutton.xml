@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/red_ic_checkbox_checked" android:state_checked="true" />
+    <item android:drawable="@mipmap/red_ic_checkbox_unchecked" android:state_checked="false" />
+    <item android:drawable="@mipmap/red_ic_checkbox_unchecked" />
+
+</selector>

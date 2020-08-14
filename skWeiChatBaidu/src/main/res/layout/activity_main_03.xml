@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/connors">
+
+    <FrameLayout
+        android:id="@+id/jf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/shijain"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/small_forme"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/time_for_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shijain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="00:00"
+        android:textColor="#56CBC3"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

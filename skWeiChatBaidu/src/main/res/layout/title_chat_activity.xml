@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/fl_parent"
+             android:layout_width="fill_parent"
+             android:layout_height="50.0dip"
+             android:background="@color/main_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/title_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left|center"
+            android:src="@mipmap/return_icon"
+            android:tint="@color/white"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/title_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxWidth="300dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/app_white"
+            android:textSize="@dimen/BigTextSize"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/quick_create"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/title_tv_content">
+
+            <TextView
+                android:id="@+id/more_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/me_title_size"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="left|center"
+            android:padding="8dp"
+            android:src="@drawable/title_moress"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/quick_create"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="left|center"
+            android:padding="8dp"
+            android:src="@mipmap/more_icon"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <com.sk.weichat.view.CircleImageView
+        android:id="@+id/avatar_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/avatar_normal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/example_name"
+            android:textColor="@color/Grey_600"
+            android:textSize="@dimen/two_level_content" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="6-23 6.00"
+            android:textColor="@color/Grey_400"
+            android:textSize="@dimen/message_time_size" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/name_tv"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/one_level_title"
+                android:visibility="gone" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/content_gif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/content_iv"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="9dp"
+                app:riv_mutate_background="true" />
+
+            <com.sk.weichat.audio_x.VoiceAnimView
+                android:id="@+id/content_va"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_bg_white_new"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/content_va_new_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/view_audio"
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:background="@color/audio_view" />
+
+                <com.sk.weichat.audio_zx.AudioView
+                    android:id="@id/av_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <fm.jiecao.jcvideoplayer_lib.JVCideoPlayerStandardforchat
+                android:id="@+id/content_jvc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/content_rl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_chat_history_lv"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/content_rl_ll"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:background="@color/Grey_300"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dw" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/content_rl_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/content_rl_ll"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

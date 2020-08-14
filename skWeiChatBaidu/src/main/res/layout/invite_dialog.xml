@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/a_bg_mse_save"
+              android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/invite_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/Grey_200"
+        android:dividerHeight="0.1dp"/>
+
+</LinearLayout>

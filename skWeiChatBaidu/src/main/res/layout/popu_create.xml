@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/pop_layout"
+    android:background="@mipmap/new_company_bg"
+    android:paddingTop="@dimen/dp15">
+
+    <Button
+        android:id="@+id/btn_add_son_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableLeft="@mipmap/add_partment_icon"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/new_company"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pop_window" />
+
+</LinearLayout>

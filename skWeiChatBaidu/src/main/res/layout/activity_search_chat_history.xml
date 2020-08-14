@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="9dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="9dp">
+
+        <com.sk.weichat.view.ClearEditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/et_search_bg"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="9dp"
+            android:singleLine="true"
+            android:drawableRight="@drawable/search_clear"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/message_search_size" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/s_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/chat_history_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@drawable/message_divider"
+            android:dividerHeight="1px"
+            android:overScrollFooter="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableBottom="@drawable/icon_not_found"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/no_data"
+            android:textColor="@color/black"
+            android:textSize="@dimen/SmallerTextSize"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/s_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/s_search_designation_content"
+            android:textColor="@color/Grey_400"
+            android:textSize="@dimen/sp_14_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="25dp">
+
+            <TextView
+                android:id="@+id/s_image_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/s_image"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_14_text_size" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="18dp"
+                android:background="@color/Grey_300" />
+
+            <TextView
+                android:id="@+id/s_video_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/s_video"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_14_text_size" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="18dp"
+                android:background="@color/Grey_300" />
+
+            <TextView
+                android:id="@+id/s_file_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/s_file"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_14_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="25dp">
+
+            <TextView
+                android:id="@+id/s_link_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/s_link"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_14_text_size" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="18dp"
+                android:background="@color/Grey_300" />
+
+            <TextView
+                android:id="@+id/s_pay_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/s_pay"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_14_text_size" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="18dp"
+                android:background="@color/Grey_300"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/s_music_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/s_music"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_14_text_size"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

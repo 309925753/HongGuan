@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="108dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="@dimen/dp10"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="103dp"
+        android:layout_height="@dimen/dp40"
+        android:background="@mipmap/label_box_icon"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#333333"
+        tools:text="哦京津冀" />
+
+    <ImageView
+        android:id="@+id/iv_delete_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/tv_label"
+        android:layout_alignRight="@id/tv_label"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginTop="-5dp"
+        android:src="@mipmap/delete_icon"
+        android:visibility="gone" />
+
+</RelativeLayout>

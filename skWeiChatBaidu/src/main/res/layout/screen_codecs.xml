@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar"/>
+
+    <GridView
+        android:id="@+id/screen_codecs_gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="fill_vertical|fill_horizontal"
+        android:horizontalSpacing="15px"
+        android:isScrollContainer="true"
+        android:numColumns="1"
+        android:padding="5px"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true"
+        android:stretchMode="columnWidth"/>
+
+</LinearLayout>

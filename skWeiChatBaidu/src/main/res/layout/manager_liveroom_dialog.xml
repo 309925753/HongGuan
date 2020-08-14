@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/modify_liveroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_manager_dialog"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/edit_live"
+        android:textColor="@color/chat_background"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/set_manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_manager_dialog"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/set_manager"
+        android:textColor="@color/chat_background" />
+
+    <Button
+        android:id="@+id/shut_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_manager_dialog"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/ban"
+        android:textColor="@color/chat_background" />
+
+    <Button
+        android:id="@+id/kick_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_manager_dialog"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/kick_room"
+        android:textColor="@color/chat_background" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_manager_dialog"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/cancel"
+        android:textColor="@color/chat_background" />
+
+</LinearLayout>

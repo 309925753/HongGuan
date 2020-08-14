@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/bg_for_row_notice"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp20"
+            android:paddingLeft="9dp"
+            android:paddingRight="15dp"
+            android:paddingTop="@dimen/dp20">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/avatar_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="9dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/avatar_normal" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/avatar_iv"
+                android:text="@string/example_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/one_level_title" />
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2018-10-1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/two_level_content" />
+        </RelativeLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginLeft="18dp" />
+
+        <!--android:background="@null"
+            android:textCursorDrawable="@null"
+            android:textIsSelectable="true"
+            android:editable="false"
+        -->
+        <TextView
+            android:paddingBottom="@dimen/dp20"
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingRight="9dp"
+            android:paddingTop="@dimen/dp20"
+            android:text="geg"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

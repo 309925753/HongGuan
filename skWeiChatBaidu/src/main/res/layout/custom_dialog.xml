@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/custom_dialog_textView_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection Error"
+        android:textColor="@color/color_white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/custom_dialog_imageView_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_dialog_textView_title"
+        android:src="@drawable/delete_48"/>
+
+    <TextView
+        android:id="@+id/custom_dialog_textView_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_dialog_textView_title"
+        android:layout_marginLeft="5px"
+        android:layout_toRightOf="@+id/custom_dialog_imageView_icon"
+        android:text="Your message here!"
+        android:textSize="20dp"/>
+
+</RelativeLayout>

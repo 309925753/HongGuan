@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/im_input_bar_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="3dip">
+
+        <ImageButton
+            android:id="@+id/emotion_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/im_btn_emotion_bg"
+            android:contentDescription="@string/app_name" />
+
+        <EditText
+            android:id="@+id/chat_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/send_btn"
+            android:layout_toRightOf="@+id/emotion_btn"
+            android:background="@drawable/im_input_bg"
+            android:inputType="textMultiLine"
+            android:longClickable="true"
+            android:maxLines="3"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/im_btn_send_bg"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <com.sk.weichat.view.ChatFaceView xmlns:chatface="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/chat_face_view"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:visibility="gone"
+        chatface:hasGif="false" />
+
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <include
+        android:id="@+id/il_bar"
+        layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:id="@+id/rl_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/il_bar"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@drawable/a_bg_for_code"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/avatar_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp15"
+                android:visibility="gone"
+                tools:src="@drawable/welcome_bg"
+                tools:visibility="visible" />
+
+            <com.sk.weichat.view.MessageAvatar
+                android:id="@+id/avatar_group"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp15"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/sp_18_text_size"
+                tools:text="姓名" />
+
+            <ImageView
+                android:id="@+id/iv_remarks"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                tools:src="@mipmap/basic_famale"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_toast"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_weight="6" />
+
+        <TextView
+            android:id="@+id/tv_toast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp20"
+            android:text="@string/Rcode" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_code"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/a_bg_for_chat_location4"
+            android:onClick="saveImageToGallery"
+            android:text="@string/save_gallery"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/a_bg_for_chat_location3"
+            android:onClick="shareSingleImage"
+            android:text="@string/trill_share"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16_text_size" />
+
+    </LinearLayout>
+
+</RelativeLayout>

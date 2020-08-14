@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/bg_live_user_dialog">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@mipmap/icon_live_user_cancle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.sk.weichat.view.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="19dp"
+                android:visibility="visible"
+                tools:src="@drawable/default_head" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="11dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="@string/example_name" />
+
+            <LinearLayout
+                android:id="@+id/llManagerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/shut_up"
+                    style="@style/BossGreenBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="0dp"
+                    android:minHeight="31dp"
+                    android:text="@string/ban"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/kick_room"
+                    style="@style/BossGreenBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:minHeight="31dp"
+                    android:text="@string/live_kick"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/set_manager"
+                    style="@style/BossGreenBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:minHeight="31dp"
+                    android:text="@string/live_set_manager"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="19dp"
+                android:paddingBottom="19dp"
+                android:singleLine="true"
+                android:text="@string/main_page_ta"
+                android:textColor="@color/app_skin_blue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

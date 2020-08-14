@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sk.weichat.view.PullToRefreshSlideListView
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptrAnimationStyle="flip"
+            app:ptrDrawableEnd="@drawable/default_ptr_rotate"
+            app:ptrDrawableStart="@drawable/default_ptr_flip"
+            app:ptrHeaderTextColor="@color/black"
+            app:ptrMode="both"
+            app:ptrOverScroll="false"
+            app:ptrScrollingWhileRefreshingEnabled="true"
+            app:ptrShowIndicator="false"
+            app:slideMode="right"
+            app:slideRightAction="reveal" />
+
+        <LinearLayout
+            android:id="@+id/create_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/no_tag"
+                    android:textColor="@color/Grey_400"
+                    android:textSize="@dimen/title_center_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/hint_tag"
+                    android:textColor="@color/Grey_400"
+                    android:textSize="@dimen/NormalTextSize" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/create_btn"
+                style="@style/BossGreenBtn"
+                android:text="@string/create_tag" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_ktv"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@mipmap/red_ic_bar_date_ktv" />
+
+        <ImageView
+            android:id="@+id/iv_travel"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_weight="1"
+            android:src="@mipmap/red_ic_bar_date_travel" />
+
+        <ImageView
+            android:id="@+id/iv_movie"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@mipmap/red_ic_bar_date_movie" />
+
+        <ImageView
+            android:id="@+id/iv_food"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_weight="1"
+            android:src="@mipmap/red_ic_bar_date_food" />
+
+        <ImageView
+            android:id="@+id/iv_game"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@mipmap/red_ic_bar_date_game" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_F5F5F5" />
+
+</LinearLayout>

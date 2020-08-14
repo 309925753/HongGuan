@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/normal_bg"
+              android:orientation="vertical">
+
+
+    <!--iconSize 右上角切换摄像头按钮的大小
+        iconMargin	 右上角切换摄像头按钮到上、右边距
+        iconSrc	     右上角切换摄像头按钮图片
+        iconLeft	 左边按钮图片资源（1.1.9+）
+        iconRight	 右边按钮图片资源（1.1.9+）
+        duration_max 设置最长录像时间（毫秒）-->
+
+    <com.sk.weichat.view.cjt2325.cameralibrary.JCameraView
+        android:id="@+id/jcameraview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

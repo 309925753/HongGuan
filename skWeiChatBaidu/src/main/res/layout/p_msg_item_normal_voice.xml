@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp5"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:descendantFocusability="beforeDescendants"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/voice_action_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/feed_main_player_pause" />
+
+    </FrameLayout>
+
+    <com.sk.weichat.audio_x.VoiceAnimView
+        android:id="@+id/chat_to_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/vioce_circle_bg"
+        android:paddingLeft="@dimen/dp5"
+        android:paddingRight="@dimen/dp5" />
+
+    <TextView
+        android:id="@+id/voice_desc_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>

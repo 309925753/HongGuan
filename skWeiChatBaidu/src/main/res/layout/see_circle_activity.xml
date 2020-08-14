@@ -1,0 +1,249 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_public"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/app_white"
+                android:paddingStart="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_sel1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_selected" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="9dp"
+                    android:layout_toEndOf="@+id/iv_sel1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_public"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="@string/publics"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/me_title_size" />
+
+                    <TextView
+                        android:id="@+id/tv_public_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="@string/all_friends_are_visible"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/group_content_size" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/View_Line"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_private"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/app_white"
+                android:paddingStart="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_sel2"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_selected"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="9dp"
+                    android:layout_toEndOf="@+id/iv_sel2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_private"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="@string/privates"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/me_title_size" />
+
+                    <TextView
+                        android:id="@+id/tv_private_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="@string/self_only_visible"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/group_content_size" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/View_Line"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_not_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_sel3"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_selected"
+                        android:visibility="invisible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="9dp"
+                        android:layout_toEndOf="@+id/iv_sel3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_not_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:text="@string/partially_visible"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/me_title_size" />
+
+                        <TextView
+                            android:id="@+id/tv_not_all_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:text="@string/selected_friends_are_visible"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/group_content_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/View_Line"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <com.sk.weichat.view.MyListView
+                    android:id="@+id/lv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="36dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_not_see"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_sel4"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_selected"
+                        android:visibility="invisible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="9dp"
+                        android:layout_toEndOf="@+id/iv_sel4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_not_see"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:text="@string/not_to_see_who"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/me_title_size" />
+
+                        <TextView
+                            android:id="@+id/tv_not_see_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:text="@string/selected_friends_are_visible"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/group_content_size" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <com.sk.weichat.view.MyListView
+                    android:id="@+id/lv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="36dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

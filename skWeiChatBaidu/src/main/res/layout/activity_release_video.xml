@@ -1,0 +1,334 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <include
+        android:id="@id/tb"
+        layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@id/tb">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_white"
+                android:gravity="top"
+                android:hint="@string/circle_now_think"
+                android:inputType="textMultiLine"
+                android:maxLength="10000"
+                android:maxLines="10"
+                android:minHeight="80dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/say_something_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <include
+                    android:id="@+id/add_video_item"
+                    layout="@layout/layout_circle_add_more_item" />
+
+                <TextView
+                    android:id="@+id/tvSelectCover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/select_cover"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_see"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/app_white"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_see"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/earth_icon" />
+
+                <TextView
+                    android:id="@+id/w_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_see"
+                    android:gravity="center"
+                    android:text="@string/who_can_see"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_see"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/tip"
+                    android:layout_toRightOf="@+id/w_s"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/publics"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/chat_text_size" />
+
+                <ImageView
+                    android:id="@+id/tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    style="@style/View_Line"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="36dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_at"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/app_white"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/remind_icon" />
+
+                <TextView
+                    android:id="@+id/a_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_at"
+                    android:gravity="center"
+                    android:text="@string/remind_who_to_see"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/tip2"
+                    android:layout_toRightOf="@+id/a_s"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/chat_text_size" />
+
+                <ImageView
+                    android:id="@+id/tip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    style="@style/View_Line"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="36dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_label"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/app_white"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/label_icon" />
+
+                <TextView
+                    android:id="@+id/l_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_label"
+                    android:gravity="center"
+                    android:text="@string/title_select_tag"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/tip3"
+                    android:layout_toRightOf="@+id/l_s"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/chat_text_size" />
+
+                <ImageView
+                    android:id="@+id/tip3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    style="@style/View_Line"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="36dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_location"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/app_white"
+                android:paddingLeft="10dp">
+
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/position_icon" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/ivArrowLocation"
+                    android:layout_toRightOf="@+id/iv_location"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <ImageView
+                    android:id="@+id/ivArrowLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/right_arrow_icon"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    style="@style/View_Line"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="36dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_ban"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/app_white"
+                android:paddingLeft="10dp">
+
+                <CheckBox
+                    android:id="@+id/cb_ban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:button="@mipmap/prohibit_icon" />
+
+                <TextView
+                    android:id="@+id/tv_ban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/cb_ban"
+                    android:gravity="center"
+                    android:text="@string/ban_pinlun"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/me_title_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_toRightOf="@+id/tv_ban"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/check_other_people_not_commented_this"
+                    android:textColor="@color/grey"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.me.redpacket.PaymentCenterActivity">
+
+    <include layout="@layout/a_view_actionbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/my_change"
+        style="@style/IMTbleLine_No_bg"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_change_icon" />
+
+        <TextView
+            style="@style/IMTbleLine_TextName"
+            android:text="@string/my_change" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg.Me"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/me_chevron_right"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/my_cloud_wallet"
+            style="@style/IMTbleLine_No_bg"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/my_cloud_wallet" />
+
+            <TextView
+                style="@style/IMTbleLine_TextName"
+                android:text="@string/my_yeepay" />
+
+            <ImageView
+                style="@style/IMTbleLine_ArrowImg.Me"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/me_chevron_right"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bank_card"
+            style="@style/IMTbleLine_No_bg"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/bank_card" />
+
+            <TextView
+                style="@style/IMTbleLine_TextName"
+                android:text="@string/bank_card" />
+
+            <ImageView
+                style="@style/IMTbleLine_ArrowImg.Me"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/me_chevron_right"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/chat_item_padding_left"
+    android:paddingTop="@dimen/chat_item_padding_top"
+    android:paddingRight="@dimen/chat_item_padding_right"
+    android:paddingBottom="@dimen/chat_item_padding_bottom">
+
+    <TextView
+        android:id="@+id/time_tv"
+        style="@style/ChattingUISystem"
+        android:visibility="gone" />
+
+    <com.sk.weichat.view.HeadView
+        android:id="@+id/chat_head_iv"
+        android:layout_width="@dimen/chat_head_size"
+        android:layout_height="@dimen/chat_head_size"
+        android:layout_below="@id/time_tv"
+        android:layout_marginStart="@dimen/chat_head_left"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_marginEnd="@dimen/chat_head_right"
+        android:layout_toRightOf="@id/chat_msc"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/avatar_normal" />
+
+    <CheckBox
+        android:id="@+id/chat_msc"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/chat_head_iv"
+        android:layout_marginTop="@dimen/dp10"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:text="123123123"
+        android:textSize="@dimen/SmallerTextSize"
+        android:visibility="gone" />
+
+    <!-- <RelativeLayout
+         android:id="@+id/chat_warp_view"
+         android:layout_width="@dimen/chat_width_red"
+         android:layout_height="64dp"
+         android:layout_below="@id/nick_name"
+         android:layout_marginTop="@dimen/chat_head_top"
+         android:layout_toRightOf="@id/chat_head_iv"
+         android:background="@drawable/a_bg_for_chat_red1">
+
+         <ImageView
+             android:id="@+id/iv_image"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="8dp"
+             android:layout_marginTop="20dp"
+             android:src="@drawable/ic_chat_hongbao" />
+
+         <TextView
+             android:id="@+id/chat_text"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="8dp"
+             android:layout_toRightOf="@id/iv_image"
+             android:maxLines="1"
+             android:maxWidth="140dp"
+             android:text="@string/best_wishes"
+             android:textColor="@color/white"
+             android:textSize="@dimen/chat_text_size" />
+
+     </RelativeLayout>
+
+     <TextView
+         android:id="@+id/tv_type"
+         android:layout_width="@dimen/chat_width_red"
+         android:layout_height="22dp"
+         android:layout_below="@id/chat_warp_view"
+         android:layout_toRightOf="@id/chat_head_iv"
+         android:background="@drawable/a_bg_for_chat_red2"
+         android:gravity="center_vertical"
+         android:paddingLeft="12dp"
+         android:text="@string/chat_red"
+         android:textColor="@color/Grey_500"
+         android:textSize="11sp" />-->
+    <RelativeLayout
+        android:id="@+id/chat_warp_view"
+        android:layout_width="@dimen/chat_width_red"
+        android:layout_height="85dp"
+        android:layout_below="@id/nick_name"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toRightOf="@id/chat_head_iv"
+        android:background="@mipmap/envelope_not_receive_left_icon">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/red_icon" />
+
+        <TextView
+            android:id="@+id/chat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@id/iv_image"
+            android:maxWidth="140dp"
+            android:maxLines="1"
+            android:text="@string/auspicious"
+            android:textColor="@color/white"
+            android:textSize="@dimen/chat_text_size" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@+id/chat_text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/iv_image"
+            android:text="红包"
+            android:textColor="@color/white"
+            android:textSize="11dp" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_holder_state_to" />
+
+</RelativeLayout>

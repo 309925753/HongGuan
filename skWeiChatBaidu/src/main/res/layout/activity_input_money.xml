@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/a_bg_for_input_payment"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receipt_money_num"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:id="@+id/transfer_dw_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="￥"
+                android:textColor="@color/app_black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/transfer_je_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/transfer_dw_tv"
+                android:maxLength="10"
+                android:textColor="@color/app_black"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="100" />
+
+            <EditText
+                android:id="@+id/et_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/transfer_dw_tv"
+                android:background="@null"
+                android:maxLength="10"
+                android:paddingTop="@dimen/dp5"
+                android:textColor="@color/app_black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transfer_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15_text_size"
+                android:visibility="gone"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/transfer_edit_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/receipt_add_desc"
+                android:textColor="@color/link_nick_name_color"
+                android:textSize="@dimen/sp_13_text_size" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp">
+
+            <Button
+                android:id="@+id/transfer_btn"
+                style="@style/bt_BossGreenBtn"
+                android:layout_centerVertical="true"
+                android:text="@string/sure" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

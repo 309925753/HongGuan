@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.me.redpacket.PaymentCenterActivity">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/bill"
+        style="@style/IMTble_No_Line"
+        android:layout_marginTop="9dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/bill"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+        <TextView
+            style="@style/IMTbleLine_TextValue"
+            android:textColor="@color/dark_dark_grey"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/right_arrow_icon"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_password"
+        style="@style/IMTble_No_Line">
+
+        <View style="@style/View_Line" />
+
+        <TextView
+            android:id="@+id/cache_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/hint_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+        <TextView
+            android:id="@+id/cache_tv"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/cache_arrow_img"
+            android:layout_toRightOf="@+id/cache_text"
+            android:textColor="@color/dark_dark_grey"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/cache_arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/right_arrow_icon"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reset_password"
+        style="@style/IMTble_No_Line">
+
+        <View style="@style/View_Line" />
+
+        <TextView
+            android:id="@+id/reset_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/forget_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+        <TextView
+            android:id="@+id/reset_password_tv"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/reset_password_arrow_img"
+            android:layout_toRightOf="@+id/reset_password_text"
+            android:textColor="@color/dark_dark_grey"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/reset_password_arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/right_arrow_icon"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+</LinearLayout>

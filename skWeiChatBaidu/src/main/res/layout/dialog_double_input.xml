@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fillet_dialog_bg"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/padding"
+            android:text="@string/create_room"
+            android:textSize="@dimen/sp_16_text_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_start_live"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_live_head"
+        android:layout_margin="9dp"
+        android:alpha="0.7"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_input_room_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_input_room_name"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/grop_dialog_bg"
+                android:padding="0dp">
+
+                <!--android:hint="@string/please_input_room_name"-->
+                <AutoCompleteTextView
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginBottom="13dp"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_input_room_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/please_input_room_desc"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:background="@drawable/grop_dialog_bg"
+                android:padding="0dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/second_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginBottom="13dp"
+                    android:background="@null"
+                    android:hint=""
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:singleLine="true"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- <attr
+           name="sb_shadow_radius"
+           format="reference|dimension"/>
+       阴影半径
+
+       <attr
+           name="sb_shadow_offset"
+           format="reference|dimension"/>
+       阴影偏移
+
+       <attr
+           name="sb_shadow_color"
+           format="reference|color"/>
+       阴影颜色
+
+       <attr
+           name="sb_uncheck_color"
+           format="reference|color"/>
+       关闭颜色
+
+       <attr
+           name="sb_checked_color"
+           format="reference|color"/>
+       开启颜色
+
+       <attr
+           name="sb_border_width"
+           format="reference|dimension"/>
+       边框宽度
+
+       <attr
+           name="sb_checkline_color"
+           format="reference|color"/>
+       开启指示器颜色
+
+       <attr
+           name="sb_checkline_width"
+           format="reference|dimension"/>
+       开启指示器线宽
+
+       <attr
+           name="sb_uncheckcircle_color"
+           format="reference|color"/>
+       关闭指示器颜色
+
+       <attr
+           name="sb_uncheckcircle_width"
+           format="reference|dimension"/>
+       关闭指示器线宽
+
+       <attr
+           name="sb_uncheckcircle_radius"
+           format="reference|dimension"/>关闭指示器半径
+
+       <attr
+           name="sb_checked"
+           format="reference|boolean"/>
+       是否选中
+
+       <attr
+           name="sb_shadow_effect"
+           format="reference|boolean"/>
+       是否启用阴影
+
+       <attr
+           name="sb_effect_duration"
+           format="reference|integer"/>
+       动画时间，默认300ms
+
+       <attr
+           name="sb_button_color"
+           format="reference|color"/>
+       按钮颜色
+
+       <attr
+           name="sb_show_indicator"
+           format="reference|boolean"/>
+       是否显示指示器，默认true：显示
+
+       <attr
+           name="sb_background"
+           format="reference|color"/>
+       背景色，默认白色
+
+       <attr
+           name="sb_enable_effect"
+           format="reference|boolean"/>
+       是否启用特效，默认true-->
+
+    <RelativeLayout
+        android:id="@+id/read_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/is_read_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/display_read_number"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.sk.weichat.view.SwitchButton
+            android:id="@+id/switch_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/public_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/is_show_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/private_group"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.sk.weichat.view.SwitchButton
+            android:id="@+id/switch_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/verify_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/group_verification"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.sk.weichat.view.SwitchButton
+            android:id="@+id/switch_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/show_member_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/display_member"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.sk.weichat.view.SwitchButton
+            android:id="@+id/switch_show_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_card_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/member_chat_privately"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.sk.weichat.view.SwitchButton
+            android:id="@+id/switch_send_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secret_group_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="9dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/secret_group_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/private_group"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/me_title_size" />
+
+            <com.sk.weichat.view.SwitchButton
+                android:id="@+id/switch_secret_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_background="@color/app_white"
+                app:sb_checked="false"
+                app:sb_checked_color="@color/main_color"
+                app:sb_effect_duration="100"
+                app:sb_shadow_radius="4dp"
+                app:sb_show_indicator="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secret_group_ll"
+            android:layout_marginTop="4dp"
+            android:text="@string/tip_secret_group"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/sp_12_text_size" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sure_btn"
+        style="@style/BossGreenBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginBottom="30dp"
+        android:text="@string/sure" />
+
+</LinearLayout>

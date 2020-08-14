@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/ava1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/avatar_normal" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ava1"
+            android:background="@drawable/chat_from_warp_bg"
+            android:gravity="center_vertical"
+            android:maxWidth="210dp"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="15dp"
+            android:paddingTop="@dimen/dp10"
+            android:text="@string/preview_font_size"
+            android:textColor="@color/black"
+            android:textSize="@dimen/chat_text_size" />
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/tv1"
+            android:src="@drawable/fire"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp">
+
+        <com.sk.weichat.view.CircleImageView
+            android:id="@+id/ava2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/im_notice" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ava2"
+            android:background="@drawable/chat_to_warp_bg"
+            android:gravity="center_vertical"
+            android:maxWidth="210dp"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="10dp"
+            android:paddingTop="@dimen/dp10"
+            android:text="@string/hint_change_font_size"
+            android:textColor="@color/black"
+            android:textSize="@dimen/chat_text_size" />
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/tv2"
+            android:src="@drawable/fire"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

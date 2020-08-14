@@ -1,0 +1,420 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+
+buildscript {
+    ext {
+        appId = 'app.hongguanim.chat' // app的包名，
+        channel = 'client' // bugly上显示的渠道名，
+
+        buglyAppId = '2912fdca4c' // bugly配置的appId,
+        baiduApiKey = 'lUTrxpAlfACpijwlkOLmKffPmn2xnRcY' // baidu配置的apiKey,
+        googleApiKey = 'AIzaSyAbJjDWUPU6sRsQccNMp8E3soO7YGSkTIg' // google地图配置的apiKey,
+        huaweiAppId = '102360999' // 华为推送配置的appId,
+        xiaomiAppId = '2882303761518426117' // 小米推送配置的appId,
+        xiaomiAppKey = '5191842687117' // 小米推送配置的appKey,
+        meizuAppId = '118639' // 魅族推送配置的appId,
+        meizuAppKey = '198cfa2fa66544ba87ab05874ba22868' // 魅族推送配置的appKey,
+        vivoAppId = '18094' // VIVO推送配置的appId,
+        vivoAppKey = '41337891-3989-4db0-8894-6ecbf313cefd' // VIVO推送配置的appKey,
+        oppoAppKey = 'dIHycN8J0NsCokwSGss8sskw4' // OPPO推送配置的appKey,
+        oppoAppSecret = 'b9f6927d9eCD0159532dA5c2e1118eC8' // OPPO推送配置的secret,
+        wechatAppId = 'wx82abd6774c88a480' // 微信相关的appId,
+        qqAppId = '1107975187' // QQ相关的appId,
+
+        buglyAppChannel = channel
+        date = new Date().format("yyyyMMdd")
+        buglyVersionNameSuffix = '' + '-' + date
+    }
+}
+// 判断存在谷歌服务配置文件才启用谷歌服务，
+def googleJson = file('google-services.json')
+if (googleJson.exists() && googleJson.readLines().any { it.contains(appId) }) {
+    apply plugin: 'com.google.gms.google-services'
+    // 谷歌服务4.2版本有已知bug会导致其他无关依赖(smack4.3.4)莫名冲突，禁用相关检查解决，
+    // https://github.com/invertase/react-native-firebase/issues/1676
+    //noinspection UnnecessaryQualifiedReference
+    com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+}
+android {
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    compileSdkVersion compile_version
+
+    defaultConfig {
+        applicationId appId
+        versionCode 1
+        versionName "1.0.0"
+        minSdkVersion min_version
+        targetSdkVersion target_version
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+            // abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
+        buildConfigField('String', "BUGLY_APP_ID", '"' + buglyAppId + '"')
+        buildConfigField('String', "BUGLY_APP_CHANNEL", '"' + buglyAppChannel + '"')
+        buildConfigField('String', "XIAOMI_APP_ID", '"' + xiaomiAppId + '"')
+        buildConfigField('String', "XIAOMI_APP_KEY", '"' + xiaomiAppKey + '"')
+        buildConfigField('String', "MEIZU_APP_ID", '"' + meizuAppId + '"')
+        buildConfigField('String', "MEIZU_APP_KEY", '"' + meizuAppKey + '"')
+        buildConfigField('String', "OPPO_APP_KEY", '"' + oppoAppKey + '"')
+        buildConfigField('String', "OPPO_APP_SECRET", '"' + oppoAppSecret + '"')
+        buildConfigField('String', "GOOGLE_API_KEY", '"' + googleApiKey + '"')
+        buildConfigField('String', "WECHAT_APP_ID", '"' + wechatAppId + '"')
+        buildConfigField('String', "QQ_APP_ID", '"' + qqAppId + '"')
+        manifestPlaceholders = [
+                APP_ID        : appId,
+                BAIDU_API_KEY : baiduApiKey,
+                VIVO_APP_ID   : vivoAppId,
+                VIVO_APP_KEY  : vivoAppKey,
+                GOOGLE_API_KEY: googleApiKey,
+                HUAWEI_APP_ID : huaweiAppId,
+                QQ_APP_ID     : qqAppId,
+        ]
+
+        resConfigs "en", "zh-rCN", "zh-rTW", "vi", "th", "in"
+    }
+    packagingOptions {
+        pickFirst 'lib/*/libc++_shared.so'
+    }
+    // 高版本as中installRelease不会依赖assembleRelease也就不会复制apk,
+    afterEvaluate {
+        // 没配置签名的话，就没有installRelease，
+        if (tasks.findByName('installRelease')) {
+            installRelease.dependsOn 'assembleRelease'
+        }
+    }
+    // 复制apk和mapping到项目中的release目录下，方便上传mapping到bugly,
+    def releaseBuglyAppVersion = android.defaultConfig.versionName + buglyVersionNameSuffix
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == 'release') {
+            variant.assembleProvider.get().doLast {
+                copy {
+                    from variant.packageApplicationProvider.get().outputs.files[1]
+                    into "${rootDir}/release"
+                    rename { String fileName ->
+                        "$channel-$releaseBuglyAppVersion-${variant.name}.apk"
+                    }
+                }
+                if (variant.mappingFile != null) {
+                    copy {
+                        from variant.mappingFile
+                        into "${rootDir}/release"
+                        rename { String fileName ->
+                            "$channel-mapping-$releaseBuglyAppVersion-${variant.name}.txt"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // multiDex的一些相关配置，这样配置可以让你的编译速度更快
+    dexOptions {
+        // 让它不要对Lib做preDexing
+        preDexLibraries = false
+        // 开启incremental dexing,优化编译效率，这个功能android studio默认是关闭的
+        // incremental true
+        // 增加java堆内存大小
+        javaMaxHeapSize "4g"
+    }
+
+    // 单元测试用，
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    // 进行JAVA 的版本配置，使用对应版本的一些新特性
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+//    buildTypes {
+//        release {
+//            minifyEnabled true
+//            // 混淆文件位置
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            buildConfigField('String', "VERSION_NAME_SUFFIX", '"' + buglyVersionNameSuffix + '"')
+//            signingConfig signingConfigs.release
+//        }
+//        debug {
+//            buildConfigField('String', "VERSION_NAME_SUFFIX", '"' + "-DEBUG" + '"')
+//            signingConfig signingConfigs.release
+//            debuggable = true
+//        }
+//    }
+    signingConfigs {
+        sigbkey {
+            storeFile file('../hongguan.jks')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias = 'hongguan'
+        }
+//        sigbkey {
+//            storeFile file('E:/android_workspase/hongguan.jks')
+//            storePassword '123456'
+//            keyPassword '123456'
+//            keyAlias = 'hongguan'
+//        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField('String', "VERSION_NAME_SUFFIX", '"' + buglyVersionNameSuffix + '"')
+            //加上以下两句
+            debuggable true
+            signingConfig signingConfigs.sigbkey
+        }
+        //添加以下
+        debug {
+            buildConfigField('String', "VERSION_NAME_SUFFIX", '"' + buglyVersionNameSuffix + '"')
+            signingConfig signingConfigs.sigbkey
+        }
+    }
+
+
+    bundle {
+        // 是否分割多语言包
+        language {
+            enableSplit = false
+        }
+
+        // 是否分割资源
+        density {
+            enableSplit = true
+        }
+
+        // 是否分割二进制 so 包资源
+        abi {
+            enableSplit = true
+        }
+    }
+    // 签名信息从signing.properties中获取，
+    // debug和release使用相同签名，以便用debug包覆盖release包从而调试，
+    // 如果没有，就会使用默认debug签名，
+//    def signingFile = rootProject.file('signing.properties')
+//    if (signingFile.exists()) {
+//        def input = signingFile.newInputStream()
+//        def p = new Properties()
+//        p.load(input)
+//        // 签名文件存在才配置签名，
+//        def jks = rootProject.file(p['storeFile'])
+//        if (jks.exists()) {
+//            signingConfigs {
+//                config {
+//                    storeFile file('../eastkeystore.jks')
+//                    storePassword '900126cjh'
+//                    keyAlias = 'chengjinhui'
+//                    keyPassword '900126cjh'
+//                    v1SigningEnabled true
+//                    v2SigningEnabled true
+//                }
+//            }
+//            buildTypes {
+//                debug {
+//                    signingConfig signingConfigs.config
+//                }
+//                release {
+//                    signingConfig signingConfigs.config
+//                }
+//            }
+//        }
+//    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { details ->
+        // jitsi和imaging两个库都依赖fresco版本冲突了，
+        if (details.requested.group == 'com.facebook.fresco') {
+            details.useVersion '2.0.0'
+        }
+    }
+    // 1.1.0会导致安卓5上webview崩溃，https://stackoverflow.com/a/58131421
+    // 准确说是低版本webView的bug，普遍存在国产安卓5上，
+    resolutionStrategy.force 'androidx.appcompat:appcompat:1.0.2'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // 1.1.0会导致安卓5上webview崩溃，https://stackoverflow.com/a/58131421
+    // 准确说是低版本webView的bug，普遍存在国产安卓5上，
+    //noinspection GradleDependency
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'de.greenrobot:eventbus:3.0.0-beta1'
+
+    implementation files('libs/android-async-http-1.4.5.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/fastjson-1.2.40.jar')
+    implementation files('libs/httpmime-4.2.jar')
+    implementation files('libs/nineoldandroids.jar')
+    implementation files('libs/ormlite-android-4.48.jar')
+    implementation files('libs/ormlite-core-4.48.jar')
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation files('libs/universal-image-loader-1.9.0.jar')
+
+
+    // QQ登录，
+    implementation files('libs/open_sdk_r6199_lite.jar')
+    // 微信支付/分享，
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
+//    // 支付宝 SDK AAR 包所需的配置
+//    implementation files('libs/alipaySdk-15.5.9-20181123210601.aar')
+
+    // 小米推送，
+    implementation files('libs/MiPush_SDK_Client_3_6_18.jar')
+    // 华为推送，
+    implementation 'com.huawei.android.hms:push:2.5.2.300'
+    implementation 'com.huawei.android.hms:base:2.5.2.300'
+    // 魅族推送，
+    implementation 'com.meizu.flyme.internet:push-internal:3.8.1@aar'
+    // vivo推送,
+    implementation files('libs/vivopushsdk_v2.3.4.jar')
+    // oppo推送，
+    implementation files('libs/mcssdk-1.0.1.jar')
+    // firebase,
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'
+
+    // 下拉刷新、视频播放、扫一扫
+    implementation project(':pullToRefershLibraryMy')
+    implementation project(':jcvideoplayer-lib')
+    implementation project(':YZxing-lib')
+
+    // 拍照录像
+    // implementation project(path: ':cameralibrary')
+    // implementation project(path: ':filterlibrary')
+    implementation project(':OpenGLlibrary')
+
+    // 直播相关...
+    implementation project(':liveLibrary')
+    implementation('com.github.AoEiuV020:jjdxm_ijkplayer:1.1.1') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
+    implementation 'tyrant:heartlayout:1.0.1'
+
+    // 音视频
+    implementation project(':meeting')
+    // 音视频使用jwt传递用户信息，
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
+    // 谷歌地图
+    // 谷歌服务版本15依赖support-v4版本26
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    // Smack
+    implementation 'org.igniterealtime.smack:smack-android-extensions:4.3.4'
+    implementation 'org.igniterealtime.smack:smack-experimental:4.3.4'
+    implementation 'org.igniterealtime.smack:smack-tcp:4.3.4'
+
+    // 视频缓存 + 视频处理
+    implementation 'com.danikula:videocache:2.7.1'
+    implementation 'com.github.yangjie10930:EpMedia:v0.9.5'
+    // 图片压缩
+    implementation 'top.zibin:Luban:1.1.3'
+    // Bitmap二级缓存库
+    implementation('com.github.chrisbanes.bitmapcache:library:2.3') {
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+
+    // 数据库调试库，仅限debug包生效，
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    // bugly上报，没配置自动上传mapping，因为测试时自动上传mapping失败，
+    implementation 'com.tencent.bugly:crashreport:2.6.6'
+    // HTML解析器
+    implementation 'org.jsoup:jsoup:1.10.3'
+    // 角标
+    implementation "me.leolin:ShortcutBadger:1.1.22"
+
+    // 图片编辑库
+    implementation 'cc.aoeiuv020:imaging:1.0'
+    // 流式布局
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    // 带header和footer的GridView
+    implementation 'in.srain.cube:grid-view-with-header-footer:1.0.12'
+    // 仿ios按钮
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    // 带数字的进度条
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+
+    // 靠谱点的圆形视图库
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation files('libs/xjgarsdklibrary-release-9.2.1-2019-08-31.aar')
+
+    // 表格面板视图，https://github.com/ceryle/FitGridView
+    implementation 'com.github.ceryle:FitGridView:v1.0.5'
+
+    // 仿ios右划返回上一页，
+    implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
+
+    // 支持侧滑的recyclerView,
+    implementation project(':swiperecyclerview')
+    // 下拉刷新布局，
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-28'
+
+    // 密码学库，加密算法用到，
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.57'
+
+    implementation 'com.huangyz0918:androidwm-light:0.1.2'
+
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    //轮播
+    implementation 'com.xhb:xbanner:1.3.1'
+    //红馆
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    api 'io.reactivex.rxjava2:rxjava:2.1.10'
+    api 'io.reactivex:rxandroid:1.2.0'
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'com.squareup.retrofit2:retrofit:2.5.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+    api 'com.youth.banner:banner:2.0.8'
+    api 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    api 'com.github.chrisbanes:PhotoView:2.1.3'
+    api 'jp.wasabeef:glide-transformations:2.0.2'
+    //百度人脸识别
+    implementation project(path: ':ocr_ui')
+    implementation project(path: ':faceplatform')
+    implementation project(path: ':faceplatform-ui')
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
+}
+
+configurations {
+    all*.exclude group: 'xpp3', module: 'xpp3'
+}
